@@ -45,7 +45,7 @@ export const Lab: FC<LabProps> = ({ dictionary }) => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-60px' }}
               transition={{ duration: 0.7, delay: index * 0.06, ease: EASE }}
-              className="rounded-3xl border border-ink/8 bg-white/70 p-6 backdrop-blur-sm transition-colors hover:border-ink/15 hover:bg-white/90 md:p-7"
+              className="rounded-3xl border border-white/8 bg-white/[0.025] p-5 backdrop-blur-md transition-colors hover:border-white/15 hover:bg-white/[0.04] md:p-7"
             >
               <h3 className="mt-5 text-xl leading-snug font-medium tracking-[-0.01em] md:text-[1.35rem]">
                 {item.title}
@@ -57,7 +57,7 @@ export const Lab: FC<LabProps> = ({ dictionary }) => {
                 {item.tags.map((tag) => (
                   <li
                     key={tag}
-                    className="text-ink-muted bg-ink/[0.04] rounded-full px-2.5 py-1 font-mono text-[10px]"
+                    className="text-ink-muted bg-white/[0.04] rounded-full px-2.5 py-1 font-mono text-[10px]"
                   >
                     {tag}
                   </li>
