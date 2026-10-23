@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from 'next'
 import { FC } from 'react'
-import { iranYekan, inter, jetbrainsMono } from '../fonts'
 import '../globals.css'
 
 export const metadata: Metadata = {
@@ -36,17 +35,16 @@ export const viewport: Viewport = {
 const LocaleLayout: FC<LayoutProps<'/[lang]'>> = async ({ children, params }) => {
   const { lang } = await params
 
+  const htmlClass = 'var(--font-inter) var(--font-jetbrains-mono)' + (lang === 'fa' ? ' var(--font-peyda)' : '')
+  const bodyClass = `${lang === 'fa' ? 'font-peyda' : 'font-technical'} bg-obsidian text-paper antialiased`
+
   return (
     <html
       lang={lang}
       dir={lang === 'fa' ? 'rtl' : 'ltr'}
-      className={`${inter.variable} ${jetbrainsMono.variable} ${iranYekan.variable}`}
+      className={htmlClass}
     >
-      <body
-        className={`${lang === 'fa' ? 'font-iran-yekan' : 'font-technical'} bg-obsidian text-paper antialiased`}
-      >
-        {children}
-      </body>
+      <body className={bodyClass}>{children}</body>
     </html>
   )
 }

@@ -1,8 +1,22 @@
 @import 'tailwindcss';
 
+@font-face {
+  font-family: 'PeydaWebFaNum';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/peyda/PeydaWebFaNum-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'PeydaWebFaNum';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/assets/fonts/peyda/PeydaWebFaNum-Bold.woff2') format('woff2');
+}
+
 @theme {
   --font-technical: var(--font-inter), var(--font-iran-yekan), sans-serif;
   --font-mono: var(--font-jetbrains-mono), 'SFMono-Regular', Menlo, monospace;
+  --font-peyda: 'PeydaWebFaNum', var(--font-iran-yekan), sans-serif;
 
   /* ── Studio Spatial Gallery palette ────────────────────── */
   --color-obsidian: #16181d;
@@ -68,4 +82,12 @@
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+.font-peyda {
+  font-family: var(--font-peyda);
+}
+
+html[lang="fa"] {
+  font-family: var(--font-peyda);
 }
