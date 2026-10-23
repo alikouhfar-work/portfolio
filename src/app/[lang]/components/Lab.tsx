@@ -12,7 +12,7 @@ export const Lab: FC<LabProps> = ({ dictionary }) => {
   )
 
   return (
-    <section id="lab" className="bg-canvas text-ink relative overflow-hidden">
+    <section id="lab" className="relative overflow-hidden border-b border-white/8">
       <div aria-hidden className="gallery-glow-light absolute inset-0" />
 
       <div className="relative mx-auto w-full max-w-[1440px] px-6 py-24 md:px-10 md:py-32 lg:px-16">
