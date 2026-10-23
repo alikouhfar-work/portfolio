@@ -1,38 +1,52 @@
 'use client'
 
-import { Footer } from '@/components/shared/Footer'
-import { Header } from '@/components/shared/Header'
+import { PROJECTS } from '@/constants/projects'
 import { useScroll } from 'motion/react'
 import { FC, useRef } from 'react'
 import { HomeProps } from '../types'
-import { About } from './About'
-import { Education } from './Education'
-import { Experience } from './Experience'
+import { ContactFooter } from './ContactFooter'
 import { Hero } from './Hero'
-import { Languages } from './Languages'
-import { Projects } from './Projects'
-import { Skills } from './Skills'
+import { Lab } from './Lab'
+import { Philosophy } from './Philosophy'
+import { SiteNav } from './SiteNav'
+import { SkillsMatrix } from './SkillsMatrix'
+import { SpatialIndex } from './SpatialIndex'
 
 const Home: FC<HomeProps> = ({ lang, dictionary }) => {
-  const containerRef = useRef(null)
+  const containerRef = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ['start start', 'end end'],
   })
 
   return (
-    <div ref={containerRef} className="relative min-h-screen">
-      <Header lang={lang} dictionary={dictionary.header} />
+    <div ref={containerRef} className="bg-obsidian relative min-h-screen">
+      <a
+        href="#skills"
+        className="focus:bg-paper focus:text-obsidian sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:px-4 focus:py-2 focus:font-mono focus:text-[10px] focus:uppercase focus:tracking-widest"
+      >
+        Skip to content
+      </a>
 
-      <Hero lang={lang} dictionary={dictionary.hero} scrollYProgress={scrollYProgress} />
-      <About lang={lang} dictionary={dictionary.about} />
-      <Experience lang={lang} dictionary={dictionary.experience} />
-      <Education lang={lang} dictionary={dictionary.education} />
-      <Projects lang={lang} dictionary={dictionary.projects} />
-      <Skills lang={lang} dictionary={dictionary.skills} />
-      <Languages lang={lang} dictionary={dictionary.languages} />
+      <SiteNav lang={lang} dictionary={dictionary.nav} />
 
-      <Footer lang={lang} dictionary={dictionary.footer} />
+      <main>
+        <Hero
+          lang={lang}
+          dictionary={dictionary.hero}
+          scrollYProgress={scrollYProgress}
+        />
+        <SkillsMatrix dictionary={dictionary.skills} />
+        <SpatialIndex
+          lang={lang}
+          dictionary={dictionary.spatialIndex}
+          projects={PROJECTS[lang]}
+        />
+        <Lab dictionary={dictionary.lab} />
+        <Philosophy dictionary={dictionary.philosophy} />
+      </main>
+
+      <ContactFooter lang={lang} dictionary={dictionary.contact} nav={dictionary.nav} />
     </div>
   )
 }

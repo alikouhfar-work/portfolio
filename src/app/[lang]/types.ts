@@ -1,33 +1,32 @@
-import { AboutDictionary } from '@/types/about'
-import { EducationDictionary } from '@/types/education'
-import { ExperienceDictionary } from '@/types/experience'
-import { FooterDictionary } from '@/types/footer'
-import { HeaderDictionary } from '@/types/haeder'
+import { Project } from '@/types/project'
 import { HeroDictionary } from '@/types/hero'
-import { LanguageDictionary } from '@/types/language'
-import { ProjectDictionary } from '@/types/project'
-import { SkillDictionary } from '@/types/skill'
+import {
+  ContactDictionary,
+  LabDictionary,
+  NavDictionary,
+  PhilosophyDictionary,
+  SkillsDictionary,
+  SpatialIndexDictionary,
+} from '@/types/sections'
 import { MotionValue } from 'motion/react'
 import { Locale } from './dictionaries'
 
 export type HomeProps = {
   lang: Locale
   dictionary: {
-    header: HeaderDictionary
+    nav: NavDictionary
     hero: HeroDictionary
-    about: AboutDictionary
-    experience: ExperienceDictionary
-    education: EducationDictionary
-    projects: ProjectDictionary
-    skills: SkillDictionary
-    languages: LanguageDictionary
-    footer: FooterDictionary
+    skills: SkillsDictionary
+    spatialIndex: SpatialIndexDictionary
+    lab: LabDictionary
+    philosophy: PhilosophyDictionary
+    contact: ContactDictionary
   }
 }
 
-export type HeaderProps = {
+export type NavProps = {
   lang: Locale
-  dictionary: HeaderDictionary
+  dictionary: NavDictionary
 }
 
 export type HeroProps = {
@@ -36,37 +35,26 @@ export type HeroProps = {
   scrollYProgress: MotionValue<number>
 }
 
-export type EducationProps = {
-  lang: Locale
-  dictionary: EducationDictionary
+export type SkillsMatrixProps = {
+  dictionary: SkillsDictionary
 }
 
-export type ExperienceProps = {
+export type SpatialIndexProps = {
   lang: Locale
-  dictionary: ExperienceDictionary
+  dictionary: SpatialIndexDictionary
+  projects: Array<Project>
 }
 
-export type AboutProps = {
-  lang: Locale
-  dictionary: AboutDictionary
+export type LabProps = {
+  dictionary: LabDictionary
 }
 
-export type ProjectsProps = {
-  lang: Locale
-  dictionary: ProjectDictionary
+export type PhilosophyProps = {
+  dictionary: PhilosophyDictionary
 }
 
-export type SkillsProps = {
+export type ContactProps = {
   lang: Locale
-  dictionary: SkillDictionary
-}
-
-export type LanguagesProps = {
-  lang: Locale
-  dictionary: LanguageDictionary
-}
-
-export type FooterProps = {
-  lang: Locale
-  dictionary: FooterDictionary
+  dictionary: ContactDictionary
+  nav: NavDictionary
 }

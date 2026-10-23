@@ -15,30 +15,20 @@ export const iranYekan = localFont({
   display: 'swap',
 })
 
-export const outfit = localFont({
+export const inter = localFont({
   src: [
-    { path: '../assets/fonts/outfit/Outfit-Thin.ttf', weight: '100', style: 'normal' },
-    { path: '../assets/fonts/outfit/Outfit-ExtraLight.ttf', weight: '200', style: 'normal' },
-    { path: '../assets/fonts/outfit/Outfit-Light.ttf', weight: '300', style: 'normal' },
-    { path: '../assets/fonts/outfit/Outfit-Regular.ttf', weight: '400', style: 'normal' },
-    { path: '../assets/fonts/outfit/Outfit-Medium.ttf', weight: '500', style: 'normal' },
-    { path: '../assets/fonts/outfit/Outfit-SemiBold.ttf', weight: '600', style: 'normal' },
-    { path: '../assets/fonts/outfit/Outfit-Bold.ttf', weight: '700', style: 'normal' },
-    { path: '../assets/fonts/outfit/Outfit-ExtraBold.ttf', weight: '800', style: 'normal' },
-    { path: '../assets/fonts/outfit/Outfit-Black.ttf', weight: '900', style: 'normal' },
+    { path: '../assets/fonts/inter/Inter-Variable.woff2', weight: '100 900', style: 'normal' },
+    { path: '../assets/fonts/inter/Inter-VariableItalic.woff2', weight: '100 900', style: 'italic' },
   ],
-  variable: '--font-outfit',
+  variable: '--font-inter',
   display: 'swap',
 })
 
-export const spaceGrotesk = localFont({
+export const jetbrainsMono = localFont({
   src: [
-    { path: '../assets/fonts/space-grotesk/SpaceGrotesk-Light.ttf', weight: '300', style: 'normal' },
-    { path: '../assets/fonts/space-grotesk/SpaceGrotesk-Regular.ttf', weight: '400', style: 'normal' },
-    { path: '../assets/fonts/space-grotesk/SpaceGrotesk-Medium.ttf', weight: '500', style: 'normal' },
-    { path: '../assets/fonts/space-grotesk/SpaceGrotesk-SemiBold.ttf', weight: '600', style: 'normal' },
-    { path: '../assets/fonts/space-grotesk/SpaceGrotesk-Bold.ttf', weight: '700', style: 'normal' },
+    { path: '../assets/fonts/jetbrains-mono/JetBrainsMono-Variable.ttf', weight: '100 800', style: 'normal' },
+    { path: '../assets/fonts/jetbrains-mono/JetBrainsMono-Italic.ttf', weight: '100 800', style: 'italic' },
   ],
-  variable: '--font-space-grotesk',
+  variable: '--font-jetbrains-mono',
   display: 'swap',
 })

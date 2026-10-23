@@ -1,63 +1,253 @@
 {
-    "header": {
-        "about": "About",
-        "experience": "Experience",
-        "education": "Education",
-        "project": "Work",
-        "expertise": "Expertise",
-        "languages": "Languages"
+    "nav": {
+        "brand": "Ali Kouhfar",
+        "skills": "Capabilities",
+        "index": "Index",
+        "lab": "The Lab",
+        "philosophy": "Philosophy",
+        "contact": "Contact",
+        "availability": "Open for work",
+        "menu": "Menu",
+        "close": "Close"
     },
     "hero": {
-        "status": "Available for new opportunities",
-        "location": "Based in Karaj, Iran",
-        "title1": "Ali",
-        "title2": "Kouhfar",
-        "subtitle": "A Frontend Developer dedicated to building ",
-        "subtitleHighlight": "robust digital structures",
-        "subtitleEnd": " with code and creativity.",
-        "cta": "View Projects",
-        "cv": "Download CV"
-    },
-    "about": {
-        "title": "01 / About",
-        "heading": "Digital <span class='text-theme'>Architect</span>",
-        "p1": "With a background in Architectural Engineering, I bring a unique perspective to frontend development—viewing every interface as a structural challenge where form must follow function. My transition from physical to digital architecture was driven by a fascination with the speed and scalability of web technologies.",
-        "p2": "I focus on writing maintainable code and building interfaces that feel intuitive. I'm constantly learning new technologies to stay at the forefront of the ever-evolving web landscape.",
-        "exp": "Years of Experience",
-        "cleanCode": "Clean Code",
-        "cleanCodeDesc": "Scalable architecture",
-        "userCentric": "User Centric",
-        "userCentricDesc": "Focused on experience"
-    },
-    "experience": {
-        "title": "02 / Professional Path",
-        "heading": "Experience",
-        "current": "Current Role",
-        "role": "Developer"
-    },
-    "education": {
-        "title": "03 / Academic Background",
-        "heading": "Education"
-    },
-    "projects": {
-        "title": "04 / Selected Works",
-        "heading": "Projects",
-        "desc": "A collection of digital products focused on performance, accessibility, and high-end aesthetics."
+        "eyebrow": "Digital blueprint — rev. 2026.01",
+        "status": "Available for select projects",
+        "statusShort": "Available",
+        "location": "Karaj, Iran",
+        "name": "Ali Kouhfar",
+        "role": "Architectural engineer → UX designer → frontend engineer",
+        "title1": "The Architecture",
+        "title2": "of Interaction",
+        "subtitle": "I design and build digital interfaces the way structures are raised — ",
+        "subtitleHighlight": "load paths, grids, and circulation",
+        "subtitleEnd": " first; pixels last.",
+        "cta": "Open the Spatial Index",
+        "contactCta": "Start a conversation",
+        "fig": "Fig. 01 — Subject",
+        "coordinates": "35.8355° N / 50.9915° E",
+        "localTime": "Local time",
+        "sheet": "Sheet 00 / Landing",
+        "roleLabel": "Role",
+        "baseLabel": "Base",
+        "focusLabel": "Focus",
+        "focusValue": "Spatial UI systems",
+        "experienceLabel": "In practice",
+        "experienceValue": "2023 — present",
+        "scrollHint": "Scroll to index",
+        "foundation": [
+            {
+                "code": "01",
+                "label": "Architectural Engineering",
+                "note": "Load, span, structure"
+            },
+            {
+                "code": "02",
+                "label": "UX Design",
+                "note": "Flow, cognition, access"
+            },
+            {
+                "code": "03",
+                "label": "Frontend Engineering",
+                "note": "React, TypeScript, speed"
+            }
+        ],
+        "statusLabel": "Status"
     },
     "skills": {
-        "title": "05 / Expertise",
-        "heading": "Expertise"
+        "eyebrow": "01 / Load-bearing capabilities",
+        "heading": "Technical & Spatial Capabilities",
+        "desc": "Three load-bearing systems: the engineering that ships the interface, the spatial tooling that gives it coordinates, and the architectural thinking that gives it order.",
+        "note": "17 instruments across three disciplines",
+        "labels": {
+            "pillars": "Pillars",
+            "instruments": "Instruments"
+        },
+        "pillars": [
+            {
+                "code": "P-01",
+                "title": "Frontend Engineering",
+                "summary": "Component architecture, type safety, and state — built for production, not for demos.",
+                "items": [
+                    "React",
+                    "Next.js",
+                    "TypeScript",
+                    "Tailwind CSS",
+                    "Zod & React Hook Form",
+                    "State Management",
+                    "RTL & MSW"
+                ]
+            },
+            {
+                "code": "P-02",
+                "title": "Spatial & Geospatial Web",
+                "summary": "Vector maps, geometry, and clustering — interfaces that reason in coordinates.",
+                "items": [
+                    "MapLibre GL",
+                    "Turf.js",
+                    "Mapbox Draw",
+                    "Geofencing",
+                    "Point Clustering"
+                ]
+            },
+            {
+                "code": "P-03",
+                "title": "UX & Architectural Systems",
+                "summary": "Information architecture, grids, and human factors — resolved before the first line of code.",
+                "items": [
+                    "Information Architecture",
+                    "Spatial Layout",
+                    "Grid Systems",
+                    "Wireframing",
+                    "Human Factors"
+                ]
+            }
+        ]
     },
-    "languages": {
-        "title": "06 / Languages",
-        "heading": "Spoken Languages"
+    "spatialIndex": {
+        "eyebrow": "02 / Selected structures",
+        "heading": "Spatial Index",
+        "desc": "Case studies read as architectural specifications: problem first, structure second, interface outcome last. Six sheets, built and shipped.",
+        "count": "06 sheets",
+        "note": "All specifications documented from production work.",
+        "labels": {
+            "constraints": "Problem / constraint",
+            "approach": "Structural architecture",
+            "impact": "UX / UI outcome",
+            "stack": "Tech stack",
+            "sheet": "Sheet",
+            "view": "Open project",
+            "private": "Private build — NDA",
+            "client": "Client work",
+            "personal": "Personal",
+            "live": "Live",
+            "nda": "NDA"
+        }
     },
-    "footer": {
-        "social": "Social",
-        "contact": "Contact",
-        "address": "Karaj, Iran",
-        "tos": "Terms of Service",
-        "privacyPolicy": "Privacy Policy",
-        "rights": "Ali Kouhfar. All Rights Reserved."
+    "lab": {
+        "eyebrow": "03 / In progress — R&D sandbox",
+        "heading": "The Lab",
+        "desc": "A live index of what I am learning, breaking, and rebuilding right now. Not finished products — active experiments.",
+        "live": "Updated continuously",
+        "labels": {
+            "status": "Status",
+            "progress": "Progress",
+            "stack": "Instruments"
+        },
+        "items": [
+            {
+                "code": "R-01",
+                "title": "Geospatial Mapping",
+                "status": "Active",
+                "description": "Vector tiles, camera choreography, and spatial indexing — interfaces that reason in coordinates.",
+                "tags": [
+                    "MapLibre GL",
+                    "Turf.js",
+                    "PostGIS"
+                ],
+                "progress": 72
+            },
+            {
+                "code": "R-02",
+                "title": "Three.js & WebGL",
+                "status": "Active",
+                "description": "Scene graphs, custom shaders, and GPU-friendly geometry — learning to render space instead of drawing it in the DOM.",
+                "tags": [
+                    "Three.js",
+                    "React Three Fiber",
+                    "GLSL"
+                ],
+                "progress": 58
+            },
+            {
+                "code": "R-03",
+                "title": "Data Structures & Algorithms",
+                "status": "Research",
+                "description": "Graphs, traversal, and complexity analysis — the load-bearing maths behind maps, caches, and search.",
+                "tags": [
+                    "TypeScript",
+                    "Graphs",
+                    "Complexity"
+                ],
+                "progress": 64
+            },
+            {
+                "code": "R-04",
+                "title": "State Architecture",
+                "status": "Active",
+                "description": "Normalised caches, finite machines, and ownership boundaries that keep complex interfaces predictable.",
+                "tags": [
+                    "TanStack Query",
+                    "Zustand",
+                    "XState"
+                ],
+                "progress": 76
+            }
+        ]
+    },
+    "philosophy": {
+        "eyebrow": "04 / Philosophy",
+        "heading": "Form follows function. Structure follows behaviour.",
+        "lead": "I was trained to read buildings before I learned to read code. The forces are the same: load distribution, a disciplined grid, and clear circulation. I design React systems the way I was taught to read structures — reduce the span, make the load path visible, keep the exits obvious.",
+        "facts": [
+            {
+                "label": "Education",
+                "value": "B.Arch — Architectural Engineering"
+            },
+            {
+                "label": "Practice",
+                "value": "Frontend engineering since 2023"
+            },
+            {
+                "label": "Base",
+                "value": "Karaj, Iran — 35.8355° N"
+            },
+            {
+                "label": "Approach",
+                "value": "Spatial systems, accessible by default"
+            }
+        ],
+        "principles": [
+            {
+                "code": "01",
+                "structural": "Load distribution",
+                "applied": "State ownership",
+                "description": "State is structural load. I place it where it bears least on the render path, and keep one source of truth per span."
+            },
+            {
+                "code": "02",
+                "structural": "Grid systems",
+                "applied": "Component geometry",
+                "description": "A grid is an agreement, not a decoration. Tokens, spacing, and primitives create a geometry every screen inherits."
+            },
+            {
+                "code": "03",
+                "structural": "Circulation paths",
+                "applied": "Accessible flows",
+                "description": "People enter, move, and exit. Focus order, landmarks, and motion preferences are the corridors of an interface."
+            }
+        ],
+        "signature": "Structure before surface.",
+        "signatureNote": "Ali Kouhfar — Karaj, 2026"
+    },
+    "contact": {
+        "eyebrow": "05 / Contact",
+        "heading": "Let’s build something structural.",
+        "whoami": "whoami",
+        "whoamiValue": "Architectural engineer · UX designer · frontend engineer",
+        "promptContact": "contact --priority",
+        "promptConnect": "connect",
+        "status": "Available for select projects",
+        "location": "Karaj, Iran (GMT+3:30)",
+        "navLabel": "Index",
+        "connectLabel": "Elsewhere",
+        "copyEmail": "Copy email",
+        "copied": "Copied",
+        "backToTop": "Back to top",
+        "colophon": "Set in Inter & JetBrains Mono · Drawn, not templated",
+        "rights": "All rights reserved.",
+        "emailHint": "Email is the fastest route.",
+        "statusLabel": "Status",
+        "locationLabel": "Base"
     }
 }

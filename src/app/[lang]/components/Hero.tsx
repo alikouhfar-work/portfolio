@@ -1,90 +1,234 @@
-import { IconArrowUpRight, IconDownload } from '@tabler/icons-react'
-import clsx from 'clsx'
+'use client'
+
+import { ArrowDown, ArrowUpRight } from 'lucide-react'
 import { motion, useTransform } from 'motion/react'
-import { FC } from 'react'
+import Image from 'next/image'
+import { FC, useEffect, useState } from 'react'
 import { HeroProps } from '../types'
 
-export const Hero: FC<HeroProps> = (props) => {
-  const { lang, dictionary, scrollYProgress } = props
-  const heroScale = useTransform(scrollYProgress, [0, 0.2], [1, 0.9])
-  const heroOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0])
+const EASE = [0.16, 1, 0.3, 1] as const
+
+export const Hero: FC<HeroProps> = ({ dictionary, scrollYProgress }) => {
+  const y = useTransform(scrollYProgress, [0, 0.06], [0, 48])
+  const opacity = useTransform(scrollYProgress, [0, 0.06], [1, 0.45])
+
+  const [time, setTime] = useState('--:--:--')
+
+  useEffect(() => {
+    const formatter = new Intl.DateTimeFormat('en-GB', {
+      timeZone: 'Asia/Tehran',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: false,
+    })
+
+    const tick = () => setTime(formatter.format(new Date()))
+    tick()
+    const interval = setInterval(tick, 1000)
+
+    return () => clearInterval(interval)
+  }, [])
+
+  const email = process.env.NEXT_PUBLIC_EMAIL ?? 'hello@alikouhfar.com'
 
   return (
-    <section
-      id="hero"
-      className="bg-ink relative flex min-h-screen flex-col justify-center overflow-hidden px-6 pt-20 text-white md:px-20"
-    >
-      <motion.div style={{ scale: heroScale, opacity: heroOpacity }} className="relative z-10">
+    <section id="hero" className="relative overflow-hidden">
+      <div aria-hidden className="gallery-glow absolute inset-0" />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -top-40 right-[-10%] h-[36rem] w-[36rem] rounded-full bg-[#3b82f6]/[0.05] blur-3xl"
+      />
+
+      <div className="relative z-10 mx-auto flex min-h-svh w-full max-w-[1440px] flex-col px-6 pt-28 pb-10 md:px-10 md:pt-32 lg:px-16">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="mb-6 flex items-center gap-4"
+          transition={{ duration: 0.8, ease: EASE }}
+          className="flex flex-wrap items-center justify-between gap-4"
         >
-          <span className="bg-theme/20 border-theme/30 text-theme rounded-full border px-3 py-1 text-[10px] font-bold tracking-widest uppercase">
-            {dictionary.status}
+          <span className="text-concrete-400 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1.5 font-mono text-[10px] tracking-[0.16em] uppercase">
+            <span className="bg-amber h-1.5 w-1.5 rounded-full" />
+            {dictionary.eyebrow}
           </span>
-          <div className="h-px w-12 bg-white/20" />
-          <span className="text-[10px] tracking-widest text-white/50 uppercase">{dictionary.location}</span>
+          <span className="text-concrete-500 hidden font-mono text-[10px] tracking-[0.2em] uppercase sm:block">
+            {dictionary.sheet}
+          </span>
         </motion.div>
-
-        <div className="relative">
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="text-display flex flex-col text-7xl leading-[0.8] font-bold uppercase md:text-[12vw]"
-          >
-            <span className={clsx(lang !== 'fa' && 'font-grotesk')}>{dictionary.title1}</span>
-            <span
-              className={clsx(
-                'stroke-white stroke-1 text-transparent md:stroke-2',
-                lang !== 'fa' && 'font-grotesk'
-              )}
-              style={{ WebkitTextStroke: '1px white' }}
-            >
-              {dictionary.title2}
-            </span>
-          </motion.h1>
-        </div>
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.6 }}
-          className="mt-12 max-w-3xl text-lg leading-relaxed font-light text-white/60 md:text-xl"
-        >
-          {dictionary.subtitle}
-          <span className="decoration-theme font-medium text-white underline underline-offset-8">
-            {dictionary.subtitleHighlight}
-          </span>
-          {dictionary.subtitleEnd}
-        </motion.p>
 
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.8 }}
-          className="mt-16 flex flex-wrap items-center gap-6"
+          style={{ y, opacity }}
+          className="flex flex-1 flex-col justify-center py-14 md:py-16"
         >
-          <a
-            href="#work"
-            className="bg-theme group flex items-center gap-3 rounded-full px-8 py-4 text-xs font-bold tracking-widest text-white uppercase transition-transform hover:scale-105"
-          >
-            {dictionary.cta}
-            <IconArrowUpRight className="rtl-flip h-5 w-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-          </a>
-          <button
-            disabled
-            className="group flex items-center gap-3 rounded-full border border-white/20 px-8 py-4 text-xs font-bold tracking-widest text-white uppercase transition-all not-disabled:hover:bg-white not-disabled:hover:text-black disabled:opacity-40"
-          >
-            {dictionary.cv}
-            <IconDownload className="h-5 w-5 transition-transform group-hover:translate-y-1" />
-          </button>
-        </motion.div>
-      </motion.div>
+          <div className="grid grid-cols-1 gap-x-8 gap-y-12 lg:grid-cols-12">
+            <div className="lg:col-span-8">
+              <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1, duration: 0.8, ease: EASE }}
+                className="flex items-center gap-5"
+              >
+                <figure className="group relative shrink-0">
+                  <div
+                    aria-hidden
+                    className="bg-steel/12 absolute -inset-3 rounded-[1.8rem] blur-2xl"
+                  />
+                  <div className="relative rounded-2xl border border-white/12 bg-white/[0.04] p-1.5 backdrop-blur-md">
+                    <div className="relative h-24 w-24 overflow-hidden rounded-[0.85rem] md:h-28 md:w-28">
+                      <Image
+                        src="/images/portrait.png"
+                        alt={dictionary.name}
+                        fill
+                        priority
+                        sizes="112px"
+                        className="object-cover object-top grayscale-[35%] transition duration-700 group-hover:grayscale-0"
+                      />
+                    </div>
+                  </div>
+                  <figcaption className="text-concrete-500 mt-2.5 font-mono text-[10px] tracking-[0.12em] uppercase">
+                    {dictionary.fig}
+                  </figcaption>
+                </figure>
 
-      <div className="bg-theme/10 absolute top-1/2 right-0 h-[60vw] w-[60vw] -translate-y-1/2 rounded-full blur-[180px]" />
+                <div>
+                  <p className="text-concrete-500 font-mono text-[10px] tracking-[0.18em] uppercase">
+                    {dictionary.roleLabel}
+                  </p>
+                  <p className="mt-1.5 text-xl font-medium tracking-tight md:text-2xl">
+                    {dictionary.name}
+                  </p>
+                  <p className="text-concrete-400 mt-1.5 max-w-[22rem] text-[13px] leading-relaxed">
+                    {dictionary.role}
+                  </p>
+                </div>
+              </motion.div>
+
+              <h1 className="mt-10 flex flex-col text-[clamp(2.75rem,6.4vw,5.75rem)] leading-[1.02] font-medium tracking-[-0.035em] md:mt-12">
+                <span className="block overflow-hidden pb-1">
+                  <motion.span
+                    initial={{ y: '110%' }}
+                    animate={{ y: 0 }}
+                    transition={{ delay: 0.22, duration: 0.9, ease: EASE }}
+                    className="block"
+                  >
+                    {dictionary.title1}
+                  </motion.span>
+                </span>
+                <span className="block overflow-hidden pb-1">
+                  <motion.span
+                    initial={{ y: '110%' }}
+                    animate={{ y: 0 }}
+                    transition={{ delay: 0.32, duration: 0.9, ease: EASE }}
+                    className="text-paper/45 block"
+                  >
+                    {dictionary.title2}
+                  </motion.span>
+                </span>
+              </h1>
+
+              <motion.p
+                initial={{ opacity: 0, y: 14 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5, duration: 0.8, ease: EASE }}
+                className="text-concrete-400 mt-7 max-w-xl text-base leading-relaxed md:text-lg"
+              >
+                {dictionary.subtitle}
+                <span className="text-paper">{dictionary.subtitleHighlight}</span>
+                {dictionary.subtitleEnd}
+              </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0, y: 14 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6, duration: 0.8, ease: EASE }}
+                className="mt-9 flex flex-wrap items-center gap-3"
+              >
+                <a
+                  href="#index"
+                  className="group bg-paper text-obsidian hover:bg-canvas inline-flex items-center gap-2.5 rounded-full px-6 py-3.5 font-mono text-[10px] tracking-[0.16em] uppercase transition-colors"
+                >
+                  {dictionary.cta}
+                  <ArrowDown className="h-3.5 w-3.5 transition-transform group-hover:translate-y-0.5" />
+                </a>
+                <a
+                  href={`mailto:${email}`}
+                  className="group text-paper inline-flex items-center gap-2.5 rounded-full border border-white/12 bg-white/[0.02] px-6 py-3.5 font-mono text-[10px] tracking-[0.16em] uppercase transition-colors hover:border-white/25 hover:bg-white/[0.05]"
+                >
+                  {dictionary.contactCta}
+                  <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 rtl:-scale-x-100" />
+                </a>
+              </motion.div>
+            </div>
+
+            <motion.aside
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.45, duration: 0.9, ease: EASE }}
+              className="lg:col-span-4 lg:self-end"
+            >
+              <div className="rounded-3xl border border-white/10 bg-white/[0.025] p-6 backdrop-blur-md">
+                <div className="flex items-center justify-between gap-3">
+                  <span className="text-concrete-400 inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.16em] uppercase">
+                    <span className="bg-amber h-1.5 w-1.5 animate-pulse rounded-full" />
+                    {dictionary.statusShort}
+                  </span>
+                  <span
+                    dir="ltr"
+                    className="text-concrete-500 font-mono text-[10px] tabular-nums"
+                  >
+                    {dictionary.coordinates}
+                  </span>
+                </div>
+
+                <div className="mt-6">
+                  <p className="text-concrete-500 font-mono text-[10px] tracking-[0.18em] uppercase">
+                    {dictionary.localTime}
+                  </p>
+                  <p
+                    dir="ltr"
+                    className="text-paper mt-2 font-mono text-3xl tracking-tight tabular-nums"
+                  >
+                    {time}
+                  </p>
+                  <p className="text-concrete-400 mt-2 text-sm">{dictionary.location}</p>
+                </div>
+
+                <dl className="mt-6 space-y-3 border-t border-white/8 pt-5">
+                  <div className="flex items-baseline justify-between gap-4">
+                    <dt className="text-concrete-500 font-mono text-[10px] tracking-[0.16em] uppercase">
+                      {dictionary.focusLabel}
+                    </dt>
+                    <dd className="text-paper text-end text-[13px]">
+                      {dictionary.focusValue}
+                    </dd>
+                  </div>
+                  <div className="flex items-baseline justify-between gap-4">
+                    <dt className="text-concrete-500 font-mono text-[10px] tracking-[0.16em] uppercase">
+                      {dictionary.experienceLabel}
+                    </dt>
+                    <dd className="text-paper text-end text-[13px]">
+                      {dictionary.experienceValue}
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            </motion.aside>
+          </div>
+        </motion.div>
+
+        <div className="text-concrete-500 flex items-center justify-between gap-4 font-mono text-[10px] tracking-[0.18em] uppercase">
+          <a
+            href="#skills"
+            className="text-concrete-400 hover:text-paper group flex items-center gap-2 transition-colors"
+          >
+            <ArrowDown className="text-amber h-3.5 w-3.5 transition-transform group-hover:translate-y-1" />
+            {dictionary.scrollHint}
+          </a>
+          <span dir="ltr" className="hidden sm:block">
+            Digital blueprint — N° 2026.01
+          </span>
+        </div>
+      </div>
     </section>
   )
 }
