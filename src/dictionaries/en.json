@@ -127,6 +127,7 @@
     "lab": {
         "eyebrow": "03 / In progress — R&D sandbox",
         "heading": "The Lab",
+        "count": "02 items",
         "desc": "A live index of what I am learning, breaking, and rebuilding right now. Not finished products — active experiments.",
         "live": "Updated continuously",
         "labels": {

@@ -19,10 +19,17 @@ export const Lab: FC<LabProps> = ({ dictionary }) => {
           transition={{ duration: 0.8, ease: EASE }}
           className="grid grid-cols-4 gap-x-6 md:grid-cols-12"
         >
+          <p className="text-amber col-span-full font-mono text-[10px] tracking-[0.2em] uppercase md:col-span-3">
+            {dictionary.eyebrow}
+          </p>
+
           <div className="col-span-full mt-6 flex flex-col justify-between gap-6 md:col-span-9 md:mt-0 md:flex-row md:items-end">
             <h2 className="text-[clamp(2.5rem,5vw,4.5rem)] leading-[1.02] font-medium tracking-[-0.035em]">
               {dictionary.heading}
             </h2>
+            <span className="text-concrete-500 shrink-0 font-mono text-[10px] tracking-[0.16em] uppercase">
+              {dictionary.count}
+            </span>
           </div>
 
           <p className="text-ink-muted col-span-full mt-6 max-w-xl text-[15px] leading-relaxed md:col-span-6 md:col-start-4 md:mt-7 md:text-base">

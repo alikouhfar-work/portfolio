@@ -61,6 +61,7 @@ export type LabDictionary = {
   eyebrow: string
   heading: string
   desc: string
+  count: string
   live: string
   labels: {
     stack: string

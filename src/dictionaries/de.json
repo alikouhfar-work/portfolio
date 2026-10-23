@@ -124,9 +124,10 @@
             "nda": "NDA"
         }
     },
-    "lab": {
+"lab": {
         "eyebrow": "03 / In Arbeit — F&E-Sandbox",
-        "heading": "Das Labor",
+        "heading": "The Lab",
+        "count": "02 items",
         "desc": "Ein lebendes Verzeichnis dessen, was ich gerade lerne, zerlege und neu baue. Keine fertigen Produkte — aktive Experimente.",
         "live": "Laufend aktualisiert",
         "labels": {
