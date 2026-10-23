@@ -137,7 +137,7 @@
         "items": [
             {
                 "code": "R-02",
-                "title": "Threejs",
+                "title": "Three.js & WebGL",
                 "description": "Scene graphs, custom shaders, and GPU‑friendly geometry — learning to render space instead of drawing it in the DOM.",
                 "tags": [
                     "Three.js",
@@ -147,7 +147,7 @@
             },
             {
                 "code": "R-03",
-                "title": "DSA",
+                "title": "Data Structures & Algorithms",
                 "description": "Graphs, traversal, and complexity analysis — the load‑bearing maths behind maps, caches, and search.",
                 "tags": [
                     "TypeScript",

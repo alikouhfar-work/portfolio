@@ -137,7 +137,7 @@
         "items": [
             {
                 "code": "R-02",
-                "title": "Threejs",
+                "title": "Three.js & WebGL",
                 "description": "Szenengraphen, eigene Shader und GPU‑freundliche Geometrie — Raum rendern statt im DOM zeichnen.",
                 "tags": [
                     "Three.js",
@@ -147,7 +147,7 @@
             },
             {
                 "code": "R-03",
-                "title": "DSA",
+                "title": "Data Structures & Algorithms",
                 "description": "Graphen, Traversierung und Komplexitätsanalyse — die tragende Mathematik hinter Karten, Caches und Suche.",
                 "tags": [
                     "TypeScript",

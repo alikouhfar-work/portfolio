@@ -137,7 +137,7 @@
 "items": [
             {
                 "code": "R-02",
-                "title": "Threejs",
+                "title": "Three.js & WebGL",
                 "description": "گراف صحنه، شیدرهای سفارشی و هندسه سازگار با GPU — رندر فضا به‌جای کشیدن آن در DOM.",
                 "tags": [
                     "Three.js",
@@ -147,8 +147,8 @@
             },
             {
                 "code": "R-03",
-                "title": "DSA",
-                "description": "گراف‌ها، پیمایش و تحلیل پیچیدگی — ریاضیات باربرِ پشت نقشه‌ها، کش‌ها و جست‌وجو.",
+                "title": "Data Structures & Algorithms",
+                "description": "گراف‌ها، پیمایش و تحلیل پیچیدگی — ریاضیات_barber_ پشت نقشه‌ها، کش‌ها و جست‌وجو.",
                 "tags": [
                     "TypeScript",
                     "Graphs",
