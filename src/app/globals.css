@@ -1,5 +1,26 @@
 @import 'tailwindcss';
 
+/* ── Custom variable fonts ────────────────────────────────────── */
+
+/* Inter variable (weights 100‑900) */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  src: url('/assets/fonts/inter/Inter-Variable.woff2') format('woff2');
+  font-display: swap;
+}
+
+/* JetBrainsMono variable (weights 100‑800) */
+@font-face {
+  font-family: 'JetBrainsMono';
+  font-style: normal;
+  font-weight: 100 800;
+  src: url('/assets/fonts/jetbrains-mono/JetBrainsMono-Variable.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* PeydaWebFaNum – all nine weights (100‑900) */
 @font-face {
   font-family: 'PeydaWebFaNum';
   font-style: normal;
@@ -55,28 +76,12 @@
   src: url('/assets/fonts/peyda/PeydaWebFaNum-Black.woff2') format('woff2');
 }
 
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 100 900;
-  src: url('/assets/fonts/inter/Inter-Variable.woff2') format('woff2');
-  font-display: swap;
-  font-family: 'Inter';
-  src: local('Inter');
-}
-@font-face {
-  font-family: 'JetBrainsMono';
-  font-style: normal;
-  font-weight: 100 800;
-  src: url('/assets/fonts/jetbrains-mono/JetBrainsMono-Variable.ttf') format('truetype');
-  font-display: swap;
-}
+/* ── Studio Spatial Gallery palette ────────────────────────────── */
 @theme {
-  --font-technical: var(--font-inter), var(--font-iran-yekan), sans-serif;
-  --font-mono: var(--font-jetbrains-mono), 'SFMono-Regular', Menlo, monospace;
-  --font-peyda: 'PeydaWebFaNum', var(--font-iran-yekan), sans-serif;
+  --font-inter: 'Inter';
+  --font-jetbrains-mono: 'JetBrainsMono';
+  --font-peyda: 'PeydaWebFaNum';
 
-  /* ── Studio Spatial Gallery palette ────────────────────── */
   --color-obsidian: #16181d;
   --color-obsidian-deep: #121316;
   --color-paper: #ededed;
@@ -93,6 +98,8 @@
   --color-steel: #93b7f2;
   --color-amber: #d9932f;
 }
+
+/* ── Base styles ───────────────────────────────────────────────── */
 
 @layer base {
   html {
@@ -112,7 +119,7 @@
   }
 }
 
-/* ── Soft ambient light ─────────────────────────────────── */
+/* ── Soft ambient light ───────────────────────────────────────── */
 
 @utility gallery-glow {
   background:
@@ -141,6 +148,8 @@
     scroll-behavior: auto !important;
   }
 }
+
+/* ── Language‑specific font overrides ──────────────────────────── */
 
 .font-peyda {
   font-family: var(--font-peyda);

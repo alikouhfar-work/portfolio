@@ -35,16 +35,17 @@ export const viewport: Viewport = {
 const LocaleLayout: FC<LayoutProps<'/[lang]'>> = async ({ children, params }) => {
   const { lang } = await params
 
-  const htmlClass = 'var(--font-inter) var(--font-jetbrains-mono)' + (lang === 'fa' ? ' var(--font-peyda)' : '')
-  const bodyClass = `${lang === 'fa' ? 'font-peyda' : 'font-technical'} bg-obsidian text-paper antialiased`
-
   return (
     <html
       lang={lang}
       dir={lang === 'fa' ? 'rtl' : 'ltr'}
-      className={htmlClass}
+      className=""
     >
-      <body className={bodyClass}>{children}</body>
+      <body
+        className={`${lang === 'fa' ? 'font-peyda' : 'font-technical'} bg-obsidian text-paper antialiased`}
+      >
+        {children}
+      </body>
     </html>
   )
 }
