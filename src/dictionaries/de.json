@@ -136,52 +136,24 @@
         },
         "items": [
             {
-                "code": "R-01",
-                "title": "Geodaten & Kartierung",
-                "status": "Aktiv",
-                "description": "Vektorkacheln, Kameraführung und räumliche Indizes — Schnittstellen, die in Koordinaten denken.",
-                "tags": [
-                    "MapLibre GL",
-                    "Turf.js",
-                    "PostGIS"
-                ],
-                "progress": 72
-            },
-            {
                 "code": "R-02",
-                "title": "Three.js & WebGL",
-                "status": "Aktiv",
-                "description": "Szenengraphen, eigene Shader und GPU-freundliche Geometrie — Raum rendern statt im DOM zeichnen.",
+                "title": "Threejs",
+                "description": "Szenengraphen, eigene Shader und GPU‑freundliche Geometrie — Raum rendern statt im DOM zeichnen.",
                 "tags": [
                     "Three.js",
                     "React Three Fiber",
                     "GLSL"
-                ],
-                "progress": 58
+                ]
             },
             {
                 "code": "R-03",
-                "title": "Datenstrukturen & Algorithmen",
-                "status": "Forschung",
+                "title": "DSA",
                 "description": "Graphen, Traversierung und Komplexitätsanalyse — die tragende Mathematik hinter Karten, Caches und Suche.",
                 "tags": [
                     "TypeScript",
                     "Graphs",
                     "Complexity"
-                ],
-                "progress": 64
-            },
-            {
-                "code": "R-04",
-                "title": "State-Architektur",
-                "status": "Aktiv",
-                "description": "Normalisierte Caches, endliche Automaten und klare Eigentümerschaft, die komplexe Oberflächen vorhersehbar halten.",
-                "tags": [
-                    "TanStack Query",
-                    "Zustand",
-                    "XState"
-                ],
-                "progress": 76
+                ]
             }
         ]
     },

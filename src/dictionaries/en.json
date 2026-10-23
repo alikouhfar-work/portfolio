@@ -136,52 +136,24 @@
         },
         "items": [
             {
-                "code": "R-01",
-                "title": "Geospatial Mapping",
-                "status": "Active",
-                "description": "Vector tiles, camera choreography, and spatial indexing — interfaces that reason in coordinates.",
-                "tags": [
-                    "MapLibre GL",
-                    "Turf.js",
-                    "PostGIS"
-                ],
-                "progress": 72
-            },
-            {
                 "code": "R-02",
-                "title": "Three.js & WebGL",
-                "status": "Active",
-                "description": "Scene graphs, custom shaders, and GPU-friendly geometry — learning to render space instead of drawing it in the DOM.",
+                "title": "Threejs",
+                "description": "Scene graphs, custom shaders, and GPU‑friendly geometry — learning to render space instead of drawing it in the DOM.",
                 "tags": [
                     "Three.js",
                     "React Three Fiber",
                     "GLSL"
-                ],
-                "progress": 58
+                ]
             },
             {
                 "code": "R-03",
-                "title": "Data Structures & Algorithms",
-                "status": "Research",
-                "description": "Graphs, traversal, and complexity analysis — the load-bearing maths behind maps, caches, and search.",
+                "title": "DSA",
+                "description": "Graphs, traversal, and complexity analysis — the load‑bearing maths behind maps, caches, and search.",
                 "tags": [
                     "TypeScript",
                     "Graphs",
                     "Complexity"
-                ],
-                "progress": 64
-            },
-            {
-                "code": "R-04",
-                "title": "State Architecture",
-                "status": "Active",
-                "description": "Normalised caches, finite machines, and ownership boundaries that keep complex interfaces predictable.",
-                "tags": [
-                    "TanStack Query",
-                    "Zustand",
-                    "XState"
-                ],
-                "progress": 76
+                ]
             }
         ]
     },

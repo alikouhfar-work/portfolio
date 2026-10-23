@@ -134,54 +134,26 @@
             "progress": "پیشرفت",
             "stack": "ابزارها"
         },
-        "items": [
-            {
-                "code": "R-01",
-                "title": "نقشه‌برداری مکانی",
-                "status": "فعال",
-                "description": "کاشی‌های برداری، کارگردانی دوربین و ایندکس مکانی — رابط‌هایی که با مختصات فکر می‌کنند.",
-                "tags": [
-                    "MapLibre GL",
-                    "Turf.js",
-                    "PostGIS"
-                ],
-                "progress": 72
-            },
+"items": [
             {
                 "code": "R-02",
-                "title": "Three.js و WebGL",
-                "status": "فعال",
+                "title": "Threejs",
                 "description": "گراف صحنه، شیدرهای سفارشی و هندسه سازگار با GPU — رندر فضا به‌جای کشیدن آن در DOM.",
                 "tags": [
                     "Three.js",
                     "React Three Fiber",
                     "GLSL"
-                ],
-                "progress": 58
+                ]
             },
             {
                 "code": "R-03",
-                "title": "ساختار داده و الگوریتم",
-                "status": "پژوهش",
+                "title": "DSA",
                 "description": "گراف‌ها، پیمایش و تحلیل پیچیدگی — ریاضیات باربرِ پشت نقشه‌ها، کش‌ها و جست‌وجو.",
                 "tags": [
                     "TypeScript",
                     "Graphs",
                     "Complexity"
-                ],
-                "progress": 64
-            },
-            {
-                "code": "R-04",
-                "title": "معماری وضعیت",
-                "status": "فعال",
-                "description": "کش نرمال‌شده، ماشین‌های متناهی و مرزهای مالکیت که رابط‌های پیچیده را قابل‌پیش‌بینی نگه می‌دارند.",
-                "tags": [
-                    "TanStack Query",
-                    "Zustand",
-                    "XState"
-                ],
-                "progress": 76
+                ]
             }
         ]
     },

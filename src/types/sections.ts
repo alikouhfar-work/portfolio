@@ -53,10 +53,8 @@ export type SpatialIndexDictionary = {
 export type LabItem = {
   code: string
   title: string
-  status: string
   description: string
   tags: Array<string>
-  progress: number
 }
 
 export type LabDictionary = {
@@ -65,8 +63,6 @@ export type LabDictionary = {
   desc: string
   live: string
   labels: {
-    status: string
-    progress: string
     stack: string
   }
   items: Array<LabItem>
