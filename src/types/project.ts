@@ -1,4 +1,4 @@
-export type ProjectCover = 'books' | 'art' | 'fleet' | 'learning' | 'commerce' | 'portfolio'
+export type ProjectCover = 'books' | 'art' | 'fleet' | 'learning' | 'commerce' | 'portfolio' | 'cinema'
 
 export type Project = {
   id: string

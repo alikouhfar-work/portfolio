@@ -105,6 +105,32 @@ export const PROJECTS: Record<Locale, Project[]> = {
       impact:
         'A portfolio read as quiet surfaces and precise typography first, and a résumé second — personality without the template.',
     },
+    {
+      id: 'd4e8b2a1-9c33-4f7d-8a22-1b6e5c9d7f88',
+      title: 'Chronicle — Movie & TV Tracker',
+      category: 'Personal / Media Tracking',
+      year: '2026',
+      cover: 'cinema',
+      scope: 'personal',
+      status: 'live',
+      tech: [
+        'Next.js 16',
+        'React 19',
+        'TypeScript',
+        'Prisma',
+        'PostgreSQL',
+        'Tailwind CSS 4',
+        'NextAuth',
+        'TMDB API',
+      ],
+      link: '#',
+      constraints:
+        'A personal watch log needed to track movies, seasons and individual episodes without losing the thread across discovery, library and progress views.',
+      approach:
+        'Built a module-first App Router architecture: Prisma models for shows, movies, seasons, episodes and tracking; server actions for writes; TMDB-backed discovery; and one library surface with filters, status and per-episode progress.',
+      impact:
+        'One searchable archive for everything watched or planned — dashboard stats, up-next episodes, episode ratings and notes, and a PWA shell that behaves like an app.',
+    },
   ],
 
   de: [
@@ -210,6 +236,32 @@ export const PROJECTS: Record<Locale, Project[]> = {
       impact:
         'Ein Portfolio, das zuerst als ruhige Flächen und präzise Typografie gelesen wird und erst dann als Lebenslauf — Persönlichkeit ohne Template.',
     },
+    {
+      id: 'd4e8b2a1-9c33-4f7d-8a22-1b6e5c9d7f88',
+      title: 'Chronicle — Film- & Serien-Tracker',
+      category: 'Persönlich / Medien-Tracking',
+      year: '2026',
+      cover: 'cinema',
+      scope: 'personal',
+      status: 'live',
+      tech: [
+        'Next.js 16',
+        'React 19',
+        'TypeScript',
+        'Prisma',
+        'PostgreSQL',
+        'Tailwind CSS 4',
+        'NextAuth',
+        'TMDB API',
+      ],
+      link: '#',
+      constraints:
+        'Ein persönliches Seh-Tagebuch musste Filme, Staffeln und einzelne Episoden verfolgen, ohne den Faden zwischen Entdeckung, Bibliothek und Fortschritt zu verlieren.',
+      approach:
+        'Modulare App-Router-Architektur: Prisma-Modelle für Serien, Filme, Staffeln, Episoden und Tracking; Server Actions für Schreibzugriffe; TMDB-gestützte Entdeckung; eine Bibliotheksfläche mit Filtern, Status und Episodenfortschritt.',
+      impact:
+        'Ein durchsuchbares Archiv für alles Gesehene und Geplante — Dashboard-Statistiken, nächste Episoden, Episodenbewertungen und Notizen sowie eine PWA-Hülle, die sich wie eine App anfühlt.',
+    },
   ],
 
   fa: [
@@ -313,6 +365,32 @@ export const PROJECTS: Record<Locale, Project[]> = {
         'صفحه به‌مثابه یک گالری استودیویی چیده شد: شبکه منضبط، تایپوگرافی آرام، کاورهای پروژه که با کد کشیده شده‌اند و یک پرتره فشرده به‌جای تصویر هیروی بزرگ.',
       impact:
         'پورتفولیویی که نخست به‌عنوان سطوح آرام و تایپوگرافی دقیق خوانده می‌شود و سپس رزومه — شخصیت، بدون قالب.',
+    },
+    {
+      id: 'd4e8b2a1-9c33-4f7d-8a22-1b6e5c9d7f88',
+      title: 'کرونیکل — ردیاب فیلم و سریال',
+      category: 'شخصی / پیگیری رسانه',
+      year: '۲۰۲۶',
+      cover: 'cinema',
+      scope: 'personal',
+      status: 'live',
+      tech: [
+        'Next.js 16',
+        'React 19',
+        'TypeScript',
+        'Prisma',
+        'PostgreSQL',
+        'Tailwind CSS 4',
+        'NextAuth',
+        'TMDB API',
+      ],
+      link: '#',
+      constraints:
+        'یک دفتر تماشای شخصی باید فیلم‌ها، فصل‌ها و تک‌تک قسمت‌ها را دنبال می‌کرد، بدون از دست دادن رشته میان کشف، کتابخانه و پیشرفت.',
+      approach:
+        'معماری ماژول‌محور App Router: مدل‌های Prisma برای سریال، فیلم، فصل، قسمت و پیگیری؛ اکشن‌های سرور برای نوشتن؛ کشف مبتنی بر TMDB؛ و یک سطح کتابخانه با فیلترها، وضعیت و پیشرفت هر قسمت.',
+      impact:
+        'یک آرشیو جست‌وجوپذیر برای همه چیزهای دیده‌شده و برنامه‌ریزی‌شده — آمار داشبورد، قسمت‌های بعدی، امتیاز و یادداشت قسمت‌ها و پوسته PWA که مانند یک اپ کار می‌کند.',
     },
   ],
 }

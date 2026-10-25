@@ -107,8 +107,8 @@
     "spatialIndex": {
         "eyebrow": "02 / Ausgewählte Strukturen",
         "heading": "Spatial Index",
-        "desc": "Fallstudien, gelesen wie Architekturspezifikationen: erst das Problem, dann die Struktur, zuletzt das Interface-Ergebnis. Sechs Blätter, gebaut und ausgeliefert.",
-        "count": "06 Blätter",
+        "desc": "Fallstudien, gelesen wie Architekturspezifikationen: erst das Problem, dann die Struktur, zuletzt das Interface-Ergebnis. Sieben Blätter, gebaut und ausgeliefert.",
+        "count": "07 Blätter",
         "note": "Alle Spezifikationen aus realer Produktionsarbeit dokumentiert.",
         "labels": {
             "constraints": "Problem / Randbedingung",
