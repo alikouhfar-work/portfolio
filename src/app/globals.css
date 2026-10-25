@@ -79,5 +79,7 @@
 }
 
 html[lang="fa"] {
+  --font-technical: var(--font-peyda), sans-serif;
+  --font-mono: var(--font-peyda), monospace;
   font-family: var(--font-peyda);
 }
