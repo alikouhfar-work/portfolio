@@ -1,30 +1,32 @@
+import { LOCALES, SITE_URL } from '@/config/site'
 import type { Metadata, Viewport } from 'next'
 import { FC } from 'react'
 import { inter, jetbrainsMono, peyda } from '../../fonts'
 import '../globals.css'
 
+export const generateStaticParams = () => LOCALES.map((lang) => ({ lang }))
+
 export const metadata: Metadata = {
-  title: {
-    template: '%s — Ali Kouhfar',
-    default: 'Ali Kouhfar — The Architecture of Interaction',
-  },
+  metadataBase: new URL(SITE_URL),
+  title: 'Frontend Developer — Ali Kouhfar',
   description:
-    'Ali Kouhfar is an architectural engineer turned UX designer and frontend engineer, building digital interfaces through spatial structure, systems thinking, and structural precision.',
+    'Ali Kouhfar is a frontend developer building production interfaces with React, Next.js, and TypeScript. An architectural engineering background informs his approach to structure, accessibility, and spatial systems.',
   keywords: [
     'Ali Kouhfar',
     'portfolio',
+    'frontend developer',
     'frontend engineer',
-    'UX designer',
+    'React developer',
+    'Next.js',
+    'TypeScript',
     'architectural engineering',
     'spatial systems',
-    'React',
-    'TypeScript',
   ],
   authors: [{ name: 'Ali Kouhfar' }],
   openGraph: {
-    title: 'Ali Kouhfar — The Architecture of Interaction',
+    title: 'Frontend Developer — Ali Kouhfar',
     description:
-      'A digital blueprint bridging architectural engineering, UX design, and modern frontend engineering.',
+      'Frontend developer building production interfaces with React, Next.js, and TypeScript — shaped by an architectural engineering background.',
     type: 'website',
   },
 }
@@ -39,11 +41,7 @@ const LocaleLayout: FC<LayoutProps<'/[lang]'>> = async ({ children, params }) =>
   const htmlClass = `${inter.variable} ${jetbrainsMono.variable} ${lang === 'fa' ? peyda.variable : ''}`
 
   return (
-    <html
-      lang={lang}
-      dir={lang === 'fa' ? 'rtl' : 'ltr'}
-      className={htmlClass}
-    >
+    <html lang={lang} dir={lang === 'fa' ? 'rtl' : 'ltr'} className={htmlClass}>
       <body
         className={`${lang === 'fa' ? 'font-peyda' : 'font-technical'} bg-obsidian text-paper antialiased`}
       >

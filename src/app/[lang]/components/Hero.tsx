@@ -1,12 +1,12 @@
 'use client'
 
+import { CONTACT_EMAIL } from '@/config/site'
+import { EASE } from '@/lib/motion'
 import { ArrowDown, ArrowUpRight } from 'lucide-react'
 import { motion, useTransform } from 'motion/react'
 import Image from 'next/image'
 import { FC, useEffect, useState } from 'react'
-import { HeroProps } from '../types'
-
-const EASE = [0.16, 1, 0.3, 1] as const
+import { HeroProps } from '../props'
 
 export const Hero: FC<HeroProps> = ({ dictionary, scrollYProgress }) => {
   const y = useTransform(scrollYProgress, [0, 0.06], [0, 48])
@@ -30,7 +30,7 @@ export const Hero: FC<HeroProps> = ({ dictionary, scrollYProgress }) => {
     return () => clearInterval(interval)
   }, [])
 
-  const email = process.env.NEXT_PUBLIC_EMAIL ?? 'hello@alikouhfar.com'
+  const email = CONTACT_EMAIL
 
   return (
     <section id="hero" className="relative overflow-hidden">
@@ -56,10 +56,7 @@ export const Hero: FC<HeroProps> = ({ dictionary, scrollYProgress }) => {
           </span>
         </motion.div>
 
-        <motion.div
-          style={{ y, opacity }}
-          className="flex flex-1 flex-col justify-center py-14 md:py-16"
-        >
+        <motion.div style={{ y, opacity }} className="flex flex-1 flex-col justify-center py-14 md:py-16">
           <div className="grid grid-cols-1 gap-x-8 gap-y-12 lg:grid-cols-12">
             <div className="lg:col-span-8">
               <motion.div
@@ -68,11 +65,8 @@ export const Hero: FC<HeroProps> = ({ dictionary, scrollYProgress }) => {
                 transition={{ delay: 0.1, duration: 0.8, ease: EASE }}
                 className="flex items-center gap-5"
               >
-                <figure className="group relative shrink-0">
-                  <div
-                    aria-hidden
-                    className="bg-steel/12 absolute -inset-3 rounded-[1.8rem] blur-2xl"
-                  />
+                <figure className="group relative shrink-0 flex flex-col items-start">
+                  <div aria-hidden className="bg-steel/12 absolute -inset-3 rounded-[1.8rem] blur-2xl" />
                   <div className="relative rounded-2xl border border-white/12 bg-white/[0.04] p-1.5 backdrop-blur-md">
                     <div className="relative h-24 w-24 overflow-hidden rounded-[0.85rem] md:h-28 md:w-28">
                       <Image
@@ -94,9 +88,7 @@ export const Hero: FC<HeroProps> = ({ dictionary, scrollYProgress }) => {
                   <p className="text-concrete-500 font-mono text-[10px] tracking-[0.18em] uppercase">
                     {dictionary.roleLabel}
                   </p>
-                  <p className="mt-1.5 text-xl font-medium tracking-tight md:text-2xl">
-                    {dictionary.name}
-                  </p>
+                  <p className="mt-1.5 text-xl font-medium tracking-tight md:text-2xl">{dictionary.name}</p>
                   <p className="text-concrete-400 mt-1.5 max-w-[22rem] text-[13px] leading-relaxed">
                     {dictionary.role}
                   </p>
@@ -144,7 +136,7 @@ export const Hero: FC<HeroProps> = ({ dictionary, scrollYProgress }) => {
                 className="mt-9 flex flex-wrap items-center gap-3"
               >
                 <a
-                  href="#index"
+                  href="#work"
                   className="group bg-paper text-obsidian hover:bg-canvas inline-flex items-center gap-2.5 rounded-full px-6 py-3.5 font-mono text-[10px] tracking-[0.16em] uppercase transition-colors"
                 >
                   {dictionary.cta}
@@ -155,7 +147,7 @@ export const Hero: FC<HeroProps> = ({ dictionary, scrollYProgress }) => {
                   className="group text-paper inline-flex items-center gap-2.5 rounded-full border border-white/12 bg-white/[0.02] px-6 py-3.5 font-mono text-[10px] tracking-[0.16em] uppercase transition-colors hover:border-white/25 hover:bg-white/[0.05]"
                 >
                   {dictionary.contactCta}
-                  <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 rtl:-scale-x-100" />
+                  <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 rtl:-scale-x-100" />
                 </a>
               </motion.div>
             </div>
@@ -172,10 +164,7 @@ export const Hero: FC<HeroProps> = ({ dictionary, scrollYProgress }) => {
                     <span className="bg-amber h-1.5 w-1.5 animate-pulse rounded-full" />
                     {dictionary.statusShort}
                   </span>
-                  <span
-                    dir="ltr"
-                    className="text-concrete-500 font-mono text-[10px] tabular-nums"
-                  >
+                  <span dir="ltr" className="text-concrete-500 font-mono text-[10px] tabular-nums">
                     {dictionary.coordinates}
                   </span>
                 </div>
@@ -184,10 +173,7 @@ export const Hero: FC<HeroProps> = ({ dictionary, scrollYProgress }) => {
                   <p className="text-concrete-500 font-mono text-[10px] tracking-[0.18em] uppercase">
                     {dictionary.localTime}
                   </p>
-                  <p
-                    dir="ltr"
-                    className="text-paper mt-2 font-mono text-3xl tracking-tight tabular-nums"
-                  >
+                  <p dir="ltr" className="text-paper mt-2 font-mono text-3xl tracking-tight tabular-nums">
                     {time}
                   </p>
                   <p className="text-concrete-400 mt-2 text-sm">{dictionary.location}</p>
@@ -198,17 +184,13 @@ export const Hero: FC<HeroProps> = ({ dictionary, scrollYProgress }) => {
                     <dt className="text-concrete-500 font-mono text-[10px] tracking-[0.16em] uppercase">
                       {dictionary.focusLabel}
                     </dt>
-                    <dd className="text-paper text-end text-[13px]">
-                      {dictionary.focusValue}
-                    </dd>
+                    <dd className="text-paper text-end text-[13px]">{dictionary.focusValue}</dd>
                   </div>
                   <div className="flex items-baseline justify-between gap-4">
                     <dt className="text-concrete-500 font-mono text-[10px] tracking-[0.16em] uppercase">
                       {dictionary.experienceLabel}
                     </dt>
-                    <dd className="text-paper text-end text-[13px]">
-                      {dictionary.experienceValue}
-                    </dd>
+                    <dd className="text-paper text-end text-[13px]">{dictionary.experienceValue}</dd>
                   </div>
                 </dl>
               </div>
@@ -218,14 +200,14 @@ export const Hero: FC<HeroProps> = ({ dictionary, scrollYProgress }) => {
 
         <div className="text-concrete-500 flex items-center justify-between gap-4 font-mono text-[10px] tracking-[0.18em] uppercase">
           <a
-            href="#skills"
+            href="#capabilities"
             className="text-concrete-400 hover:text-paper group flex items-center gap-2 transition-colors"
           >
             <ArrowDown className="text-amber h-3.5 w-3.5 transition-transform group-hover:translate-y-1" />
             {dictionary.scrollHint}
           </a>
           <span dir="ltr" className="hidden sm:block">
-            Digital blueprint — N° 2026.01
+            {dictionary.blueprint}
           </span>
         </div>
       </div>

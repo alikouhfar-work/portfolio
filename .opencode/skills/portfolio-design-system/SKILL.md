@@ -1,19 +1,250 @@
 ---
 name: portfolio-design-system
-description: Refined, warm, studio-gallery design system for Ali's Architectural, UX, and Frontend portfolio.
+description: Refined, warm, studio-gallery design system and project architecture for Ali Kouhfar's Architectural and Frontend portfolio (Next.js 16, Tailwind 4, trilingual EN/DE/FA). Use for any styling, section, project, locale, font, SEO, or 404 work in this repo.
 ---
 
-# Studio Spatial Gallery Design System
+# Studio Spatial Gallery — Design System & Architecture
 
-## 1. Ergonomic, Eye-Friendly Palette (Warm Studio Dark / Warm Cream Light)
-- Dark Mode Background: Warm Architectural Charcoal (`#121316` or `#16181D`) — softer than pitch black `#000000`.
-- Light Mode Background: Warm Gallery Canvas (`#FAF9F6` or `#F5F4F0`) — softer than harsh `#FFFFFF`.
-- Primary Text: Soft Crisp Off-White (`#EDEDED`) in dark mode / Charcoal (`#1C1E22`) in light mode.
-- Borders & Rules: Ultra-subtle, low-opacity structural dividers (`border-white/10` or `border-black/10`). NO harsh bright grid lines.
-- Accent Color: Subtle Muted Steel Blue (`#3B82F6` / `#60A5FA`) or Warm Ochre/Amber (`#D97706`).
+Awwwards-calibre, architectural portfolio. Think gallery wall, not dashboard: warm charcoal,
+off-white paper, hairline rules, monospaced metadata, muted amber + steel accents, generous
+negative space. Persian (`fa`) is a first-class RTL locale with its own typeface.
 
-## 2. Spatial Rhythm & Typography
-- Headings: Display Sans (Inter / Display) with `font-medium` or `font-semibold` — elegant and structured without screaming.
-- Metadata & Technical Badges: JetBrains Mono at small scale (`text-xs` / `tracking-wider` / `uppercase`).
-- Spacing: Generous padding between sections (`py-24` to `py-32`), letting content "breathe" like artwork in an architectural gallery.
-- Cards/Containers: Soft backdrop blur (`backdrop-blur-md`), gentle borders (`border-white/5`), subtle rounded corners (`rounded-xl` or `rounded-2xl`).
+## 1. Stack, commands, rendering model
+
+- Next.js 16 App Router (`src/app`), React 19, TypeScript strict, Tailwind CSS 4 (`@theme` in CSS, no config file), Motion (`motion/react`), lucide-react.
+- Package manager: `bun`. Scripts: `dev`, `build`, `start`, `lint`, `shots`, `og`.
+- Verify every change with:
+  ```bash
+  bun run build
+  bun run lint
+  ```
+- `bun run shots` captures `en/de/fa` at desktop + mobile into `screenshots/` (gitignored).
+  It needs the app running (`BASE_URL`, default `http://localhost:3000`) and system Chrome
+  (`CHROME_PATH` override on non-macOS). The script scrolls the page before capturing so
+  Motion `whileInView` content is visible.
+- `bun run og` re-renders `public/og/{en,de,fa}.png` with Chrome, so Persian text is shaped by
+  the browser. Re-run it whenever OG copy/branding changes. Do not switch OG back to
+  `ImageResponse`: Satori/WOFF2 and Arabic shaping are unreliable there.
+- `/[lang]` is **statically pre-rendered** for `en/de/fa` via `generateStaticParams` in
+  `src/app/[lang]/layout.tsx`. Do not add `headers()`/`cookies()`/`useSearchParams()` to
+  shared layouts, `not-found`, or section components — it silently turns the page dynamic.
+- Git branch for the current redesign: `feature/architectural-redesign`.
+
+## 2. Repository map
+
+```
+src/
+  app/
+    globals.css                 # @theme tokens, base, glow utilities, RTL/font overrides
+    layout?                     # none: [lang]/layout is the root layout (html/body)
+    not-found.tsx               # trilingual, static 404 (root boundary)
+    sitemap.ts  robots.ts  manifest.ts
+    [lang]/
+      layout.tsx                # fonts, <html lang dir>, generateStaticParams, metadataBase
+      page.tsx                  # hasLocale, dictionary, generateMetadata (canonical/hreflang/OG)
+      dictionaries.ts           # server-only JSON loaders + shape validation, Locale re-export
+      props.ts                  # HomeProps + per-section prop types (from Dictionary)
+      components/
+        Home.tsx                # 'use client' shell (useScroll); skip link, nav, sections
+        SiteNav.tsx             # fixed nav, scroll progress, locale switch, mobile drawer
+        Hero.tsx
+        Capabilities.tsx        # disciplines + skills matrix
+        SelectedWork.tsx        # project case-study list
+        Lab.tsx
+        Approach.tsx            # architectural method + principles
+        ContactFooter.tsx
+  assets/fonts/{inter,jetbrains-mono,peyda}/   # raw font files
+  components/
+    project-covers/             # one module per cover + registry (index.tsx)
+      BooksCover / ArtCover / FleetCover / LearningCover / CommerceCover /
+      PortfolioCover / WatchLogCover / types.ts
+    ui/                         # SectionShell, SectionHeader, Tag, MetaRow
+  config/site.ts                # LOCALES, Locale, DEFAULT_LOCALE, SITE_URL, contact/social
+  constants/
+    projects.ts                 # canonical PROJECT_ENTRIES + ProjectCopy per locale
+    not-found.ts                # trilingual 404 copy
+  dictionaries/{en,de,fa}.json  # all UI copy + meta
+  fonts.ts                      # next/font/local definitions (MUST stay at src/ root)
+  lib/{utils,motion}.ts         # cn(), EASE + viewport presets
+  proxy.ts                      # locale redirect (accept-language), Next 16 proxy convention
+  types/{dictionary,project}.ts
+public/og/{en,de,fa}.png        # generated by scripts/og-images.ts (bun run og)
+```
+
+Data flow: `[lang]/page.tsx` → `getDictionary(lang)` → `Home` → section components.
+Projects are **not** inside dictionaries; `Project` objects are derived from
+`PROJECT_ENTRIES` in `src/constants/projects.ts`.
+
+## 3. Color tokens (`src/app/globals.css`)
+
+| Token | Hex | Use |
+| --- | --- | --- |
+| `obsidian` | `#16181D` | page background |
+| `obsidian-deep` | `#121316` | deeper surfaces |
+| `paper` | `#EDEDED` | primary text on dark |
+| `canvas` | `#F5F4F0` | warm light surface (rarely used) |
+| `ink` | `#1C1E22` | primary text on light |
+| `ink-muted` | `#62605B` | secondary text on light |
+| `guideline` | `#2B2D33` | structural rules |
+| `concrete-100` | `#E6E3DC` | light dividers |
+| `concrete-300` | `#C9C5BC` | light secondary |
+| `concrete-400` | `#ACA89F` | secondary text on dark |
+| `concrete-500` | `#8B877E` | metadata / tertiary text |
+| `blueprint` | `#2563EB` | reserved technical accent |
+| `steel` | `#93B7F2` | codes, technical labels |
+| `amber` | `#D9932F` | eyebrow, live dot, active/hover accent |
+
+Rules:
+- Surfaces: `border-white/8`, `bg-white/[0.02]`–`bg-white/[0.045]`, `divide-white/6`.
+- Prefer `text-concrete-400` for body on dark, `text-concrete-500` for mono metadata.
+  Never use `text-ink-muted` on dark sections.
+- Accent discipline: amber for one focal element per block; steel for numeric/code labels.
+- Focus ring is global: `outline: 2px solid var(--color-amber)`.
+- Ambient light: `.gallery-glow` (dark sections), `.gallery-glow-light` (Lab), always `aria-hidden`.
+- Selection: amber bg, obsidian text. Reduced-motion is globally honored.
+
+## 4. Typography (critical)
+
+- `font-technical` → Inter (default Latin UI): `--font-technical: var(--font-inter, system-ui), sans-serif`.
+- `font-mono` → JetBrains Mono: `--font-mono: var(--font-jetbrains-mono, ui-monospace), monospace`.
+- `font-peyda` → Peyda (Persian), used on `<body>` when `lang === 'fa'`.
+- **Do not use `@font-face`.** Fonts are loaded with `next/font/local` in `src/fonts.ts`
+  (Inter variable + italic, JetBrains Mono variable + italic, Peyda 9 static weights).
+- **`src/fonts.ts` must live at `src/` root**, not under `src/app/`. Moving it breaks Turbopack
+  resolution (`Can't resolve 'next/font/local/target.css'`).
+- `layout.tsx` builds `htmlClass = ${inter.variable} ${jetbrainsMono.variable} ${lang === 'fa' ? peyda.variable : ''}`.
+- `globals.css` forces Persian everywhere, including technical utilities:
+  ```css
+  html[lang="fa"] {
+    --font-technical: var(--font-peyda), sans-serif;
+    --font-mono: var(--font-peyda), monospace;
+    font-family: var(--font-peyda);
+  }
+  ```
+  So keep using `font-mono` / `font-technical`; never hardcode `font-jetbrains-mono`.
+- Type scale in use: hero `clamp(2.5rem,5vw,4.5rem)`; section h2 `clamp(2.5rem,5vw,4.5rem)`;
+  body `text-[15px] md:text-base`; metadata `font-mono text-[10px] tracking-[0.16em] uppercase`.
+- Headings: `font-medium`, tight tracking (`-0.035em` for display), `text-balance`, often `max-w-[22ch]`.
+- Metadata always uppercase mono with wide tracking. Technical strings (`C–01 → C–07`, `D–01 → D–03`,
+  `R–01 → R–02`, section notes, email, `Portfolio / 2026`) get `dir="ltr"` even on RTL pages.
+
+## 5. Layout, sections, primitives
+
+- Page container: `mx-auto w-full max-w-[1440px] px-6 md:px-10 lg:px-16` (inside `SectionShell`).
+- Section rhythm: `py-24 md:py-32`, separated by `border-b border-white/8`.
+- Use `SectionShell` (`src/components/ui/SectionShell.tsx`) for every main section:
+  - `id`, optional `labelledBy`, `backdrop` = `gallery | gallery-soft | gallery-light | blueprint | none`.
+  - Renders the ambient backdrop, container, and top/bottom border.
+- Use `SectionHeader` for the standard header: amber mono eyebrow, large `h2` with id,
+  optional right count, optional description. Keep `headingClassName="max-w-[22ch]"` for Capabilities.
+- Card recipe: `rounded-3xl border border-white/8 bg-white/[0.025] p-5 backdrop-blur-md
+  hover:border-white/15 hover:bg-white/[0.04] md:p-7`. Smaller cards: `rounded-2xl … p-5/p-6`.
+- `Tag` (`tone="outline"` for SelectedWork stack, `tone="solid"` for Lab) renders an `<li>`.
+- `MetaRow` renders the section footer: left note + optional LTR range (`C–01 → C–07`).
+- Section IDs are fixed: `capabilities`, `work`, `lab`, `approach`, `contact`; nav codes `01`–`05`.
+- Lab intentionally has no runtime filter and only two items (Three.js/WebGL, DSA). It uses
+  `backdrop="gallery-light"` and dark-section text colors.
+
+## 6. Motion conventions
+
+- Import `EASE`, `VIEWPORT` (`-80px`), `VIEWPORT_TIGHT` (`-60px`) from `src/lib/motion.ts`.
+- Entrance: `initial={{ opacity: 0, y: 20–24 }}`, `whileInView`, `viewport={VIEWPORT}`, `duration: 0.7–0.8`, stagger `delay: index * 0.05–0.08`.
+- Hover: border/bg tint + `transition-colors`; image scale `group-hover:scale-[1.025]` over `duration-700`.
+- Arrows: `rtl:-scale-x-100` on every directional icon. Scroll progress bar uses `origin-left rtl:origin-right`.
+- Don't give a section an entrance animation on a wrapper that also handles layout if it hides
+  content from static screenshots; scroll before capturing (the shots script does this).
+
+## 7. RTL rules
+
+- `dir` is set on `<html>` from the locale; `fa` is RTL. Use logical utilities (`ms-*`, `me-*`,
+  `text-end`) and `rtl:` variants instead of `left/right` where direction matters.
+- Keep Latin/technical strings LTR with `dir="ltr"` (emails, codes, ranges, shell prompts).
+- Persian digits are acceptable in prose; counts that are part of the design system use the
+  localized dictionary string (`07 sheets` / `07 Blätter` / `۷ برگ`).
+- The root 404 is trilingual: each card sets `lang` and `dir` independently.
+
+## 8. Content, i18n, and types
+
+- Every user-visible string belongs in `en.json`, `de.json`, `fa.json` — same key shape. The
+  `Dictionary` type is derived from `en.json` (`src/types/dictionary.ts`), and `de`/`fa` are
+  checked with `satisfies Dictionary` in `dictionaries.ts`. Add a key to all three or the build fails.
+- `meta` (title + description) is per locale and consumed by `generateMetadata` in `[lang]/page.tsx`.
+- Locales are defined once in `src/config/site.ts` (`LOCALES`, `Locale`, `DEFAULT_LOCALE`);
+  import them from there in proxy, dictionaries, SiteNav, sitemap, 404, and OG routes.
+- Site URL/email/social fallbacks are also in `src/config/site.ts`
+  (`SITE_URL`, `CONTACT_EMAIL`, `GITHUB_URL`, `LINKEDIN_URL`).
+- `fa` copy is authored, not machine-translated; keep the architectural tone.
+- Counts in section headers are dictionary values (`selectedWork.count`, `lab.count`) so they
+  localize; numeric ranges are derived from array lengths. When adding/removing projects, still
+  update `selectedWork.count` and the prose that states the total.
+- Do not add runtime filters to hide content. Remove unwanted items from the dictionaries instead.
+- Root 404 copy lives in `src/constants/not-found.ts` because the root boundary has no locale
+  params; all three languages are rendered side by side. Do not turn it into a client component
+  or add `headers()` — that either fails or makes `[lang]` dynamic.
+
+## 9. Adding or editing a project
+
+1. Add one entry to `PROJECT_ENTRIES` in `src/constants/projects.ts`:
+   shared meta (`id`, optional `link`, `cover`, `scope`, `visibility`, `stack`) + `copy` for
+   `en`, `de`, `fa` (`year`, `title`, `category`, `challenge`, `approach`, `outcome`).
+   `PROJECTS` is derived.
+2. Add the cover variant to `ProjectCoverVariant` in `src/types/project.ts`.
+3. Create `src/components/project-covers/<Name>Cover.tsx` using `CoverProps` (`svgId`) and register
+   it in `src/components/project-covers/index.tsx` under the variant name.
+4. Covers use a deterministic id from the project id — no `useId`, so modules stay server-safe.
+   Keep the `C—NN` plate number and the 480×360 composition.
+5. Update `selectedWork.count` in all three dictionaries and the prose total
+   ("Seven/Sieben/هفت پروژه"). The work footer derives `C–01 → C–NN` automatically.
+6. `visibility: 'nda'` renders the private pill; without `link`, a public project renders the
+   "Published" pill. Only add `link` when there is a real public URL.
+7. Verify desktop/mobile, LTR/RTL, then build + lint. Use `bun run shots` for a visual check.
+
+Existing covers: `books` (C—01 Shiralinia), `art` (C—02 MARTEX), `fleet` (C—03 Sepahtan),
+`learning` (C—04 ISILEARNING), `commerce` (C—05 TBAO), `portfolio` (C—06 Portfolio),
+`watchLog` (C—07 Chronicle).
+
+## 10. Adding a section
+
+1. Add its copy to all three JSON files; the `Dictionary` type derives from `en.json`.
+2. Add the prop type in `src/app/[lang]/props.ts` using `Dictionary['yourKey']`.
+3. Create the component under `src/app/[lang]/components/`, use `SectionShell` + `SectionHeader`,
+   give it a stable `id`/`aria-labelledby`, and add it to `Home.tsx`.
+4. Add the section to `SiteNav` links + `ContactFooter` index links; update nav codes if needed.
+5. Motion sections are `'use client'`; static shell/header can stay server-safe.
+6. Verify keyboard focus, reduced motion, and static rendering.
+
+## 11. Accessibility, SEO, metadata
+
+- Each section: one `h2` (with id) + `aria-labelledby`; cards use `h3`; decorative layers `aria-hidden`.
+- Icon-only buttons need `aria-label`; locale links use `aria-current`; mobile menu uses
+  `aria-expanded` + `aria-controls`; copy-email button uses `aria-live="polite"`.
+- Covers: wrapper carries `role="img"` + `aria-label`, inner SVG `aria-hidden`.
+- External links: `target="_blank"` + `rel="noopener noreferrer"`.
+- `[lang]/page.tsx` generates title/description, canonical, `hreflang` (incl. `x-default`),
+  OpenGraph, Twitter, and `/og/{locale}.png` images. `metadataBase` is set in the locale layout.
+- `sitemap.ts` includes all locales with alternates; `robots.ts` points at the sitemap;
+  `manifest.ts` uses obsidian theme colors and `start_url: '/'` (proxy negotiates locale).
+- OG images are pre-rendered browser screenshots at 1200×630, generated with `bun run og`.
+  This is intentional: `next/og`/Satori rejects WOFF2 and cannot shape Persian reliably.
+- Global focus-visible ring and reduced-motion handling are already in `globals.css` — don't override.
+
+## 12. Gotchas / guardrails
+
+- No `@font-face`; no `font-jetbrains-mono` utility. Use `font-technical` / `font-mono` / `font-peyda`.
+- Keep `src/fonts.ts` at the `src/` root.
+- Tailwind 4: tokens live in `@theme`; there is no `tailwind.config.*`.
+- `Lab.tsx` deliberately has no background class and uses `gallery-light`; keep its copy/colors
+  consistent with the dark sections (`text-concrete-*`, not `text-ink-*`).
+- `Home.tsx` is client-only due to `useScroll`; it passes `scrollYProgress` to `Hero`.
+- `ProjectCover` modules have no hooks and are safe to import from server code, but the current
+  `SelectedWork` is a client component, so they are bundled with it.
+- `proxy.ts` must skip `/_next`, `/api`, `/images`, and dotted asset paths. It handles locale
+  redirect only; do not add pathname headers (they make static routes dynamic).
+- The root `not-found.tsx` must stay server-rendered and static. Next does not render client
+  components or segment `not-found` files reliably for catch-all misses in this setup. Its top
+  band is language-neutral (`404 / ∅`, `EN — DE — FA`); localized copy lives in the three cards.
+- Do not introduce remote images; covers are inline SVG by design.
+- Keep `Project` shape unchanged: `Project = ProjectMeta & ProjectCopy`; consumers still receive
+  `PROJECTS[lang]` as a flat array.
+- OG images live in `public/og/` and are generated by `scripts/og-images.ts`; run `bun run og`
+  after changing `meta.tagline`, `hero.role`, `hero.location`, or `nav.brand`.

@@ -1,226 +1,208 @@
 {
-    "nav": {
-        "brand": "Ali Kouhfar",
-        "skills": "Kompetenzen",
-        "index": "Index",
-        "lab": "Das Labor",
-        "philosophy": "Philosophie",
-        "contact": "Kontakt",
-        "availability": "Offen für Arbeit",
-        "menu": "Menü",
-        "close": "Schließen"
+  "nav": {
+    "brand": "Ali Kouhfar",
+    "role": "Frontend-Entwickler",
+    "capabilities": "Kompetenzen",
+    "work": "Arbeiten",
+    "lab": "Labor",
+    "approach": "Über mich",
+    "contact": "Kontakt",
+    "availability": "Verfügbar",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen",
+    "skipToContent": "Zum Inhalt springen",
+    "primaryLabel": "Hauptnavigation",
+    "mobileLabel": "Mobile Navigation",
+    "portfolio": "Portfolio / 2026"
+  },
+  "hero": {
+    "eyebrow": "Die Architektur der Interaktion — Version 2026.01",
+    "statusShort": "Verfügbar",
+    "location": "Karaj, Iran",
+    "name": "Ali Kouhfar",
+    "role": "React · Next.js · TypeScript — produktionsreife Interfaces mit struktureller Präzision.",
+    "title1": "Frontend-",
+    "title2": "Entwickler",
+    "subtitle": "Ich baue produktionsreife Interfaces so, wie Gebäude entstehen — zuerst ",
+    "subtitleHighlight": "Lastpfade, Raster und Wegeführung",
+    "subtitleEnd": ", dann Pixel.",
+    "cta": "Ausgewählte Arbeiten ansehen",
+    "contactCta": "Kontakt aufnehmen",
+    "fig": "Abb. 01 — Porträt",
+    "coordinates": "35.8355° N / 50.9915° E",
+    "localTime": "Ortszeit",
+    "sheet": "Blatt 00 / Startseite",
+    "roleLabel": "Frontend-Entwickler",
+    "focusLabel": "Fokus",
+    "focusValue": "React, Next.js & TypeScript",
+    "experienceLabel": "Berufserfahrung",
+    "experienceValue": "2023 — heute",
+    "scrollHint": "Zu den Arbeiten",
+    "blueprint": "Digitaler Bauplan — 2026.01"
+  },
+  "capabilities": {
+    "eyebrow": "01 / Frontend-Kompetenzen",
+    "heading": "Frontend-Entwicklung & Interface-Systeme",
+    "desc": "Drei Bereiche der Frontend-Praxis: die React-Entwicklung, die das Interface ausliefert; die räumlichen Systeme, die ihm Koordinaten geben; und die Interface-Systeme, die es konsistent und barrierefrei halten.",
+    "note": "17 Kompetenzen in drei Disziplinen",
+    "labels": {
+      "disciplines": "Disziplinen",
+      "skills": "Kompetenzen"
     },
-    "hero": {
-        "eyebrow": "Digitaler Bauplan — Rev. 2026.01",
-        "status": "Verfügbar für ausgewählte Projekte",
-        "statusShort": "Verfügbar",
-        "location": "Karaj, Iran",
-        "name": "Ali Kouhfar",
-        "role": "Architektur-Ingenieur → UX-Designer → Frontend-Entwickler",
-        "title1": "Die Architektur",
-        "title2": "der Interaktion",
-        "subtitle": "Ich entwerfe und baue digitale Schnittstellen so, wie Bauwerke errichtet werden — zuerst ",
-        "subtitleHighlight": "Lastpfade, Raster und Wegeführung",
-        "subtitleEnd": ", dann Pixel.",
-        "cta": "Spatial Index öffnen",
-        "contactCta": "Gespräch beginnen",
-        "fig": "Abb. 01 — Subjekt",
-        "coordinates": "35.8355° N / 50.9915° E",
-        "localTime": "Ortszeit",
-        "sheet": "Blatt 00 / Einstieg",
-        "roleLabel": "Rolle",
-        "baseLabel": "Standort",
-        "focusLabel": "Fokus",
-        "focusValue": "Räumliche UI-Systeme",
-        "experienceLabel": "Praxis",
-        "experienceValue": "2023 — heute",
-        "scrollHint": "Zum Index scrollen",
-        "foundation": [
-            {
-                "code": "01",
-                "label": "Architektur-Ingenieurwesen",
-                "note": "Last, Spannweite, Struktur"
-            },
-            {
-                "code": "02",
-                "label": "UX-Design",
-                "note": "Fluss, Kognition, Zugang"
-            },
-            {
-                "code": "03",
-                "label": "Frontend-Entwicklung",
-                "note": "React, TypeScript, Tempo"
-            }
-        ],
-        "statusLabel": "Status"
-    },
-    "skills": {
-        "eyebrow": "01 / Tragende Fähigkeiten",
-        "heading": "Technische & räumliche Kompetenzen",
-        "desc": "Drei tragende Systeme: die Technik, die die Oberfläche ausliefert; die räumlichen Werkzeuge, die ihr Koordinaten geben; und das architektonische Denken, das ihr Ordnung gibt.",
-        "note": "17 Instrumente in drei Disziplinen",
-        "labels": {
-            "pillars": "Säulen",
-            "instruments": "Instrumente"
-        },
-        "pillars": [
-            {
-                "code": "P-01",
-                "title": "Frontend-Engineering",
-                "summary": "Komponentenarchitektur, Typsicherheit und Zustand — für den Produktivbetrieb gebaut, nicht für Demos.",
-                "items": [
-                    "React",
-                    "Next.js",
-                    "TypeScript",
-                    "Tailwind CSS",
-                    "Zod & React Hook Form",
-                    "State Management",
-                    "RTL & MSW"
-                ]
-            },
-            {
-                "code": "P-02",
-                "title": "Räumliches & geospatiales Web",
-                "summary": "Vektorkarten, Geometrie und Cluster — Schnittstellen, die in Koordinaten denken.",
-                "items": [
-                    "MapLibre GL",
-                    "Turf.js",
-                    "Mapbox Draw",
-                    "Geofencing",
-                    "Punkt-Clustering"
-                ]
-            },
-            {
-                "code": "P-03",
-                "title": "UX & architektonische Systeme",
-                "summary": "Informationsarchitektur, Raster und menschliche Faktoren — geklärt vor der ersten Codezeile.",
-                "items": [
-                    "Informationsarchitektur",
-                    "Räumliches Layout",
-                    "Rastersysteme",
-                    "Wireframing",
-                    "Human Factors"
-                ]
-            }
-        ]
-    },
-    "spatialIndex": {
-        "eyebrow": "02 / Ausgewählte Strukturen",
-        "heading": "Spatial Index",
-        "desc": "Fallstudien, gelesen wie Architekturspezifikationen: erst das Problem, dann die Struktur, zuletzt das Interface-Ergebnis. Sieben Blätter, gebaut und ausgeliefert.",
-        "count": "07 Blätter",
-        "note": "Alle Spezifikationen aus realer Produktionsarbeit dokumentiert.",
-        "labels": {
-            "constraints": "Problem / Randbedingung",
-            "approach": "Strukturelle Architektur",
-            "impact": "UX-/UI-Ergebnis",
-            "stack": "Technologie-Stack",
-            "sheet": "Blatt",
-            "view": "Projekt öffnen",
-            "private": "Interner Build — NDA",
-            "client": "Kundenarbeit",
-            "personal": "Eigenprojekt",
-            "live": "Live",
-            "nda": "NDA"
-        }
-    },
-"lab": {
-        "eyebrow": "03 / In Arbeit — F&E-Sandbox",
-        "heading": "The Lab",
-        "count": "02 items",
-        "desc": "Ein lebendes Verzeichnis dessen, was ich gerade lerne, zerlege und neu baue. Keine fertigen Produkte — aktive Experimente.",
-        "live": "Laufend aktualisiert",
-        "labels": {
-            "status": "Status",
-            "progress": "Fortschritt",
-            "stack": "Instrumente"
-        },
+    "disciplines": [
+      {
+        "code": "D-01",
+        "title": "Frontend-Entwicklung",
+        "summary": "Komponentenarchitektur, Typsicherheit und Zustand — für den Produktivbetrieb gebaut, nicht für Demos.",
         "items": [
-            {
-                "code": "R-02",
-                "title": "Three.js & WebGL",
-                "description": "Szenengraphen, eigene Shader und GPU‑freundliche Geometrie — Raum rendern statt im DOM zeichnen.",
-                "tags": [
-                    "Three.js",
-                    "React Three Fiber",
-                    "GLSL"
-                ]
-            },
-            {
-                "code": "R-03",
-                "title": "Data Structures & Algorithms",
-                "description": "Graphen, Traversierung und Komplexitätsanalyse — die tragende Mathematik hinter Karten, Caches und Suche.",
-                "tags": [
-                    "TypeScript",
-                    "Graphs",
-                    "Complexity"
-                ]
-            }
+          "React",
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS",
+          "Zod & React Hook Form",
+          "Zustandsverwaltung",
+          "RTL & MSW"
         ]
-    },
-    "philosophy": {
-        "eyebrow": "04 / Philosophie",
-        "heading": "Form folgt Funktion. Struktur folgt Verhalten.",
-        "lead": "Ich lernte, Gebäude zu lesen, bevor ich lernte, Code zu lesen. Die Kräfte sind dieselben: Lastverteilung, ein diszipliniertes Raster und klare Wegeführung. Ich entwerfe React-Systeme so, wie ich Strukturen zu lesen lernte — Spannweite reduzieren, den Lastpfad sichtbar halten, Ausgänge offensichtlich machen.",
-        "facts": [
-            {
-                "label": "Ausbildung",
-                "value": "B.Arch — Architektur-Ingenieurwesen"
-            },
-            {
-                "label": "Praxis",
-                "value": "Frontend-Entwicklung seit 2023"
-            },
-            {
-                "label": "Standort",
-                "value": "Karaj, Iran — 35.8355° N"
-            },
-            {
-                "label": "Ansatz",
-                "value": "Räumliche Systeme, barrierefrei by default"
-            }
-        ],
-        "principles": [
-            {
-                "code": "01",
-                "structural": "Lastverteilung",
-                "applied": "State-Ownership",
-                "description": "State ist strukturelle Last. Ich platziere ihn dort, wo er den Renderpfad am wenigsten belastet, und halte pro Spannweite eine Quelle der Wahrheit."
-            },
-            {
-                "code": "02",
-                "structural": "Rastersysteme",
-                "applied": "Komponentengeometrie",
-                "description": "Ein Raster ist eine Übereinkunft, keine Dekoration. Tokens, Abstände und Primitiven bilden eine Geometrie, die jeder Screen erbt."
-            },
-            {
-                "code": "03",
-                "structural": "Wegeführung",
-                "applied": "Barrierefreie Flüsse",
-                "description": "Menschen treten ein, bewegen sich und verlassen den Raum. Fokusreihenfolge, Landmarks und Bewegungspräferenzen sind die Korridore einer Oberfläche."
-            }
-        ],
-        "signature": "Struktur vor Oberfläche.",
-        "signatureNote": "Ali Kouhfar — Karaj, 2026"
-    },
-    "contact": {
-        "eyebrow": "05 / Kontakt",
-        "heading": "Bauen wir etwas Strukturelles.",
-        "whoami": "whoami",
-        "whoamiValue": "Architektur-Ingenieur · UX-Designer · Frontend-Entwickler",
-        "promptContact": "contact --priority",
-        "promptConnect": "connect",
-        "status": "Verfügbar für ausgewählte Projekte",
-        "location": "Karaj, Iran (GMT+3:30)",
-        "navLabel": "Index",
-        "connectLabel": "Anderswo",
-        "copyEmail": "E-Mail kopieren",
-        "copied": "Kopiert",
-        "backToTop": "Nach oben",
-        "colophon": "Gesetzt in Inter & JetBrains Mono · Gezeichnet, nicht getemplatet",
-        "rights": "Alle Rechte vorbehalten.",
-        "emailHint": "E-Mail ist der schnellste Weg.",
-        "statusLabel": "Status",
-        "locationLabel": "Standort"
+      },
+      {
+        "code": "D-02",
+        "title": "Räumliches & geospatiales Web",
+        "summary": "Vektorkarten, Geometrie und Cluster — Schnittstellen, die in Koordinaten denken.",
+        "items": ["MapLibre GL", "Turf.js", "Mapbox Draw", "Geofencing", "Punkt-Clustering"]
+      },
+      {
+        "code": "D-03",
+        "title": "Interface-Systeme & Barrierefreiheit",
+        "summary": "Design-Tokens, responsive Raster und barrierefreie Interaktion — die Regeln, die jeder Screen erbt.",
+        "items": [
+          "Design-Systeme",
+          "Responsives Layout",
+          "Rastersysteme",
+          "Barrierefreiheit",
+          "Motion & Interaktion"
+        ]
+      }
+    ]
+  },
+  "selectedWork": {
+    "eyebrow": "02 / Frontend-Arbeiten",
+    "heading": "Ausgewählte Frontend-Arbeiten",
+    "desc": "Jedes Projekt ist wie ein architektonisches Briefing aufgebaut: erst die Herausforderung, dann das Vorgehen, zuletzt das Ergebnis. Sieben produktionsreife Frontend-Projekte, entwickelt und veröffentlicht.",
+    "count": "07 Projekte",
+    "note": "Alle Projekte stammen aus realer Frontend-Produktionsarbeit.",
+    "labels": {
+      "challenge": "Herausforderung",
+      "approach": "Vorgehen",
+      "outcome": "Ergebnis",
+      "technologies": "Technologien",
+      "project": "Projekt",
+      "visit": "Website öffnen",
+      "underNda": "Vertraulich (NDA)",
+      "clientProject": "Kundenprojekt",
+      "personalProject": "Eigenprojekt",
+      "live": "Live",
+      "published": "Veröffentlicht",
+      "nda": "NDA"
     }
+  },
+  "lab": {
+    "eyebrow": "03 / Frontend-Experimente",
+    "heading": "Das Labor",
+    "count": "02 Experimente",
+    "desc": "Was ich gerade im Frontend lerne, ausprobiere und neu aufbaue — keine fertigen Produkte, sondern laufende Experimente.",
+    "labels": {
+      "stack": "Technologien"
+    },
+    "items": [
+      {
+        "code": "R-01",
+        "title": "Three.js & WebGL",
+        "description": "Szenengraphen, eigene Shader und GPU‑freundliche Geometrie — Raum rendern statt im DOM zeichnen.",
+        "tags": ["Three.js", "React Three Fiber", "GLSL"]
+      },
+      {
+        "code": "R-02",
+        "title": "Datenstrukturen & Algorithmen",
+        "description": "Graphen, Traversierung und Komplexitätsanalyse — die tragende Mathematik hinter Karten, Caches und Suche.",
+        "tags": ["TypeScript", "Graphen", "Komplexität"]
+      }
+    ],
+    "note": "Forschungsnotizbuch — 2026"
+  },
+  "approach": {
+    "eyebrow": "04 / Über mich & Arbeitsweise",
+    "heading": "Frontend-Entwicklung, geprägt von Architektur.",
+    "lead": "Ich bin Frontend-Entwickler mit einem Hintergrund in Architekturingenieurwesen. Ich baue React-Systeme so, wie ich Strukturen zu lesen lernte: Spannweite reduzieren, den Lastpfad sichtbar halten, Ausgänge offensichtlich machen. Das Ergebnis sind Interfaces, die schnell, barrierefrei und strukturell belastbar sind.",
+    "facts": [
+      {
+        "label": "Rolle",
+        "value": "Frontend-Entwickler"
+      },
+      {
+        "label": "Berufserfahrung",
+        "value": "Frontend-Entwicklung seit 2023"
+      },
+      {
+        "label": "Ausbildung",
+        "value": "B.Arch. — Architektur"
+      },
+      {
+        "label": "Standort",
+        "value": "Karaj, Iran — 35.8355° N"
+      },
+      {
+        "label": "Ansatz",
+        "value": "Räumliche Systeme, von Anfang an barrierefrei"
+      }
+    ],
+    "principles": [
+      {
+        "code": "01",
+        "structural": "Lastverteilung",
+        "applied": "Zustandsverantwortung",
+        "description": "Zustand ist strukturelle Last. Ich platziere ihn dort, wo er den Renderpfad am wenigsten belastet, und halte pro Spannweite eine Quelle der Wahrheit."
+      },
+      {
+        "code": "02",
+        "structural": "Rastersysteme",
+        "applied": "Komponentengeometrie",
+        "description": "Ein Raster ist eine Übereinkunft, keine Dekoration. Tokens, Abstände und Primitiven bilden eine Geometrie, die jeder Screen erbt."
+      },
+      {
+        "code": "03",
+        "structural": "Wegeführung",
+        "applied": "Barrierefreie Abläufe",
+        "description": "Menschen kommen an, bewegen sich und gehen. Fokusreihenfolge, Orientierungspunkte und Bewegungspräferenzen sind die Korridore einer Oberfläche."
+      }
+    ],
+    "signature": "Struktur vor Oberfläche.",
+    "signatureNote": "Ali Kouhfar — Karaj, 2026",
+    "sectionNote": "Abschnitt 04 — Lastpfade / Raster / Wegeführung"
+  },
+  "contact": {
+    "eyebrow": "05 / Kontakt",
+    "heading": "Bauen wir etwas, das trägt.",
+    "whoami": "whoami",
+    "whoamiValue": "Frontend-Entwickler · React · Next.js · TypeScript",
+    "promptContact": "contact --priority=high",
+    "promptConnect": "connect",
+    "status": "Verfügbar für ausgewählte Projekte",
+    "location": "Karaj, Iran (GMT+3:30)",
+    "navLabel": "Bereiche",
+    "copyEmail": "E-Mail-Adresse kopieren",
+    "copied": "Kopiert",
+    "backToTop": "Nach oben",
+    "colophon": "Gesetzt in Inter, JetBrains Mono & Peyda · Von Grund auf gestaltet, keine Vorlagen.",
+    "rights": "Alle Rechte vorbehalten.",
+    "emailHint": "Am schnellsten erreichen Sie mich per E-Mail.",
+    "statusLabel": "Verfügbarkeit",
+    "locationLabel": "Standort",
+    "languagesLabel": "Sprachen",
+    "languages": "Persisch (Muttersprache) · Englisch (fließend) · Deutsch (berufliche Kenntnisse)"
+  },
+  "meta": {
+    "title": "Frontend-Entwickler",
+    "description": "Ali Kouhfar ist Frontend-Entwickler und baut produktionsreife Interfaces mit React, Next.js und TypeScript. Sein Hintergrund als Architekturingenieur prägt seinen Zugang zu Struktur, Barrierefreiheit und räumlichen Systemen.",
+    "tagline": "Die Architektur der Interaktion"
+  }
 }

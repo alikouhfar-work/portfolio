@@ -1,18 +1,16 @@
 'use client'
 
+import { CONTACT_EMAIL, GITHUB_URL, LINKEDIN_URL } from '@/config/site'
+import { EASE } from '@/lib/motion'
 import { ArrowUp, ArrowUpRight, Check, Copy } from 'lucide-react'
 import { motion } from 'motion/react'
 import { FC, useState } from 'react'
-import { ContactProps } from '../types'
-
-const EASE = [0.16, 1, 0.3, 1] as const
+import { ContactProps } from '../props'
 
 export const ContactFooter: FC<ContactProps> = ({ dictionary, nav }) => {
   const [copied, setCopied] = useState(false)
 
-  const email = process.env.NEXT_PUBLIC_EMAIL ?? 'hello@alikouhfar.com'
-  const github = process.env.NEXT_PUBLIC_GITHUB ?? 'https://github.com'
-  const linkedin = process.env.NEXT_PUBLIC_LINKEDIN ?? 'https://linkedin.com'
+  const email = CONTACT_EMAIL
 
   const year = new Date().getFullYear()
 
@@ -27,16 +25,16 @@ export const ContactFooter: FC<ContactProps> = ({ dictionary, nav }) => {
   }
 
   const connectLinks = [
-    { label: 'GitHub', href: github },
-    { label: 'LinkedIn', href: linkedin },
+    { label: 'GitHub', href: GITHUB_URL },
+    { label: 'LinkedIn', href: LINKEDIN_URL },
     { label: 'Email', href: `mailto:${email}` },
   ]
 
   const indexLinks = [
-    { label: nav.skills, href: '#skills' },
-    { label: nav.index, href: '#index' },
+    { label: nav.capabilities, href: '#capabilities' },
+    { label: nav.work, href: '#work' },
     { label: nav.lab, href: '#lab' },
-    { label: nav.philosophy, href: '#philosophy' },
+    { label: nav.approach, href: '#approach' },
   ]
 
   return (
@@ -44,7 +42,7 @@ export const ContactFooter: FC<ContactProps> = ({ dictionary, nav }) => {
       <div aria-hidden className="gallery-glow absolute inset-0 opacity-70" />
       <div
         aria-hidden
-        className="text-paper pointer-events-none absolute -right-10 -bottom-20 text-[22vw] leading-none font-medium tracking-[-0.06em] select-none opacity-[0.015]"
+        className="text-paper pointer-events-none absolute -right-10 -bottom-20 text-[22vw] leading-none font-medium tracking-[-0.06em] opacity-[0.015] select-none"
       >
         AK
       </div>
@@ -68,20 +66,16 @@ export const ContactFooter: FC<ContactProps> = ({ dictionary, nav }) => {
 
             <div className="mt-10 max-w-xl rounded-2xl border border-white/8 bg-white/[0.02] p-5 font-mono text-[11px] backdrop-blur-sm">
               <div dir="ltr" className="text-concrete-500 flex flex-wrap items-center gap-x-1.5">
-                <span className="text-amber">ali@karaj</span>
-                <span>:~$</span>
+                <span className="text-amber">$</span>
                 <span className="text-paper">{dictionary.whoami}</span>
               </div>
-              <p className="text-concrete-400 mt-2 text-[13px] leading-relaxed">
-                {dictionary.whoamiValue}
-              </p>
+              <p className="text-concrete-400 mt-2 text-[13px] leading-relaxed">{dictionary.whoamiValue}</p>
 
               <div
                 dir="ltr"
                 className="text-concrete-500 mt-5 flex flex-wrap items-center gap-x-1.5 border-t border-white/6 pt-5"
               >
-                <span className="text-amber">ali@karaj</span>
-                <span>:~$</span>
+                <span className="text-amber">$</span>
                 <span className="text-paper">{dictionary.promptContact}</span>
                 <span className="bg-amber ml-1 inline-block h-3 w-1.5 animate-pulse rounded-full" />
               </div>
@@ -93,7 +87,7 @@ export const ContactFooter: FC<ContactProps> = ({ dictionary, nav }) => {
               className="group text-paper hover:text-amber mt-8 block w-fit max-w-full text-[clamp(1.4rem,3.6vw,2.75rem)] font-medium tracking-[-0.03em] break-all transition-colors"
             >
               {email}
-              <ArrowUpRight className="ml-2 inline h-[0.55em] w-[0.55em] transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+              <ArrowUpRight className="ml-2 inline h-[0.55em] w-[0.55em] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </a>
 
             <div className="mt-4 flex flex-wrap items-center gap-3">
@@ -138,7 +132,7 @@ export const ContactFooter: FC<ContactProps> = ({ dictionary, nav }) => {
                       className="group text-concrete-400 hover:text-paper flex items-center justify-between rounded-xl px-2 py-2.5 font-mono text-[11px] tracking-[0.12em] uppercase transition-colors hover:bg-white/[0.04]"
                     >
                       {link.label}
-                      <ArrowUpRight className="text-concrete-500 group-hover:text-amber h-3.5 w-3.5 transition-[color,transform] group-hover:-translate-y-0.5 group-hover:translate-x-0.5 rtl:-scale-x-100" />
+                      <ArrowUpRight className="text-concrete-500 group-hover:text-amber h-3.5 w-3.5 transition-[color,transform] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 rtl:-scale-x-100" />
                     </a>
                   </li>
                 ))}
@@ -178,6 +172,14 @@ export const ContactFooter: FC<ContactProps> = ({ dictionary, nav }) => {
                   </dt>
                   <dd className="text-paper font-mono text-[10px] tracking-[0.06em] uppercase">
                     {dictionary.location}
+                  </dd>
+                </div>
+                <div className="flex items-start justify-between gap-3">
+                  <dt className="text-concrete-500 shrink-0 font-mono text-[10px] tracking-[0.14em] uppercase">
+                    {dictionary.languagesLabel}
+                  </dt>
+                  <dd className="text-paper text-end font-mono text-[10px] tracking-[0.06em] uppercase">
+                    {dictionary.languages}
                   </dd>
                 </div>
               </dl>

@@ -1,13 +1,12 @@
 'use client'
 
+import { CONTACT_EMAIL, LOCALES } from '@/config/site'
 import { cn } from '@/lib/utils'
 import { ArrowUpRight, Menu, X } from 'lucide-react'
 import { motion, useScroll } from 'motion/react'
 import Link from 'next/link'
 import { FC, useEffect, useState } from 'react'
-import { NavProps } from '../types'
-
-const LOCALES = ['en', 'de', 'fa'] as const
+import { NavProps } from '../props'
 
 export const SiteNav: FC<NavProps> = ({ lang, dictionary }) => {
   const [open, setOpen] = useState(false)
@@ -15,10 +14,10 @@ export const SiteNav: FC<NavProps> = ({ lang, dictionary }) => {
   const { scrollYProgress } = useScroll()
 
   const links = [
-    { id: 'skills', code: '01', label: dictionary.skills },
-    { id: 'index', code: '02', label: dictionary.index },
+    { id: 'capabilities', code: '01', label: dictionary.capabilities },
+    { id: 'work', code: '02', label: dictionary.work },
     { id: 'lab', code: '03', label: dictionary.lab },
-    { id: 'philosophy', code: '04', label: dictionary.philosophy },
+    { id: 'approach', code: '04', label: dictionary.approach },
     { id: 'contact', code: '05', label: dictionary.contact },
   ]
 
@@ -32,7 +31,7 @@ export const SiteNav: FC<NavProps> = ({ lang, dictionary }) => {
       { rootMargin: '-40% 0px -55% 0px' }
     )
 
-    ;['skills', 'index', 'lab', 'philosophy', 'contact'].forEach((id) => {
+    ;['capabilities', 'work', 'lab', 'approach', 'contact'].forEach((id) => {
       const element = document.getElementById(id)
       if (element) observer.observe(element)
     })
@@ -54,13 +53,13 @@ export const SiteNav: FC<NavProps> = ({ lang, dictionary }) => {
     }
   }, [open])
 
-  const email = process.env.NEXT_PUBLIC_EMAIL ?? 'hello@alikouhfar.com'
+  const email = CONTACT_EMAIL
 
   return (
     <header className="fixed inset-x-0 top-0 z-50">
       <div
         aria-hidden
-        className="bg-obsidian/75 border-b border-white/8 absolute inset-0 -z-10 backdrop-blur-xl"
+        className="bg-obsidian/75 absolute inset-0 -z-10 border-b border-white/8 backdrop-blur-xl"
       />
 
       <motion.div
@@ -75,19 +74,14 @@ export const SiteNav: FC<NavProps> = ({ lang, dictionary }) => {
             AK
           </span>
           <span className="flex flex-col gap-1 leading-none">
-            <span className="text-[11px] font-medium tracking-[0.16em] uppercase">
-              {dictionary.brand}
-            </span>
-            <span
-              dir="ltr"
-              className="text-concrete-500 font-mono text-[10px] tracking-[0.2em] uppercase"
-            >
-              Portfolio / 2026
+            <span className="text-[11px] font-medium tracking-[0.16em] uppercase">{dictionary.brand}</span>
+            <span className="text-concrete-500 font-mono text-[10px] tracking-[0.2em] uppercase">
+              {dictionary.role}
             </span>
           </span>
         </Link>
 
-        <nav aria-label="Primary" className="hidden items-center gap-1 lg:flex">
+        <nav aria-label={dictionary.primaryLabel} className="hidden items-center gap-1 lg:flex">
           {links.map((link) => (
             <a
               key={link.id}
@@ -101,7 +95,7 @@ export const SiteNav: FC<NavProps> = ({ lang, dictionary }) => {
             >
               <span
                 className={cn(
-                  'text-concrete-500 transition-colors group-hover:text-steel',
+                  'text-concrete-500 group-hover:text-steel transition-colors',
                   active === link.id && 'text-steel'
                 )}
               >
@@ -118,10 +112,7 @@ export const SiteNav: FC<NavProps> = ({ lang, dictionary }) => {
             {dictionary.availability}
           </span>
 
-          <div
-            dir="ltr"
-            className="flex items-center gap-0.5 rounded-full border border-white/10 p-0.5"
-          >
+          <div dir="ltr" className="flex items-center gap-0.5 rounded-full border border-white/10 p-0.5">
             {LOCALES.map((locale) => (
               <Link
                 key={locale}
@@ -129,9 +120,7 @@ export const SiteNav: FC<NavProps> = ({ lang, dictionary }) => {
                 aria-current={locale === lang ? 'true' : undefined}
                 className={cn(
                   'rounded-full px-2 py-1 font-mono text-[10px] tracking-[0.08em] uppercase transition-colors',
-                  locale === lang
-                    ? 'bg-paper text-obsidian'
-                    : 'text-concrete-400 hover:text-paper'
+                  locale === lang ? 'bg-paper text-obsidian' : 'text-concrete-400 hover:text-paper'
                 )}
               >
                 {locale}
@@ -144,7 +133,7 @@ export const SiteNav: FC<NavProps> = ({ lang, dictionary }) => {
             onClick={() => setOpen((value) => !value)}
             aria-expanded={open}
             aria-controls="mobile-navigation"
-            aria-label={open ? dictionary.close : dictionary.menu}
+            aria-label={open ? dictionary.closeMenu : dictionary.openMenu}
             className="text-paper grid h-8 w-8 place-items-center rounded-xl border border-white/10 transition-colors hover:border-white/20 hover:bg-white/[0.05] lg:hidden"
           >
             {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
@@ -155,9 +144,9 @@ export const SiteNav: FC<NavProps> = ({ lang, dictionary }) => {
       {open && (
         <div
           id="mobile-navigation"
-          className="bg-obsidian/95 border-t border-white/8 fixed inset-x-0 top-16 bottom-0 z-40 overflow-y-auto backdrop-blur-2xl lg:hidden"
+          className="bg-obsidian/95 fixed inset-x-0 top-16 bottom-0 z-40 overflow-y-auto border-t border-white/8 backdrop-blur-2xl lg:hidden"
         >
-          <nav aria-label="Mobile" className="flex flex-col gap-3 px-6 py-8">
+          <nav aria-label={dictionary.mobileLabel} className="flex flex-col gap-3 px-6 py-8">
             {links.map((link) => (
               <a
                 key={link.id}
@@ -167,7 +156,7 @@ export const SiteNav: FC<NavProps> = ({ lang, dictionary }) => {
               >
                 <span className="text-steel font-mono text-[10px]">{link.code}</span>
                 <span className="text-xl font-medium tracking-tight">{link.label}</span>
-                <ArrowUpRight className="text-concrete-500 group-hover:text-paper ms-auto h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 rtl:-scale-x-100" />
+                <ArrowUpRight className="text-concrete-500 group-hover:text-paper ms-auto h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 rtl:-scale-x-100" />
               </a>
             ))}
           </nav>

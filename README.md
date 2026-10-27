@@ -18,7 +18,7 @@
 
 ## Description
 
-This repository contains a sleek, professional portfolio website built with Next.js, TypeScript, and Tailwind CSS. The website serves as a showcase for my projects, skills, and experiences, designed to highlight my technical and design capabilities. It features smooth animations, a modern theme, and multi-language support, providing a seamless experience for potential employers or clients.
+This repository contains a sleek, professional portfolio website built with Next.js, TypeScript, and Tailwind CSS. The website serves as a showcase for my projects, skills, and experiences, designed to highlight my technical and frontend capabilities. It features smooth animations, a modern theme, and multi-language support, providing a seamless experience for potential employers or clients.
 
 ## Features
 
@@ -55,7 +55,7 @@ This repository contains a sleek, professional portfolio website built with Next
 
 - **Version 1.0.0** (Initial Release - 2024-02-15):
   - Implemented basic portfolio structure with project showcase, skills section, and contact form.
-  - Integrated smooth page transitions for enhanced user experience.
+  - Integrated smooth page transitions between sections.
   - Updated dependencies to the latest versions for improved performance and security.
   - Added multi-language support for internationalization.
 

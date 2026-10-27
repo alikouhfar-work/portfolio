@@ -1,22 +1,28 @@
-export type ProjectCover = 'books' | 'art' | 'fleet' | 'learning' | 'commerce' | 'portfolio' | 'cinema'
+export type ProjectCoverVariant =
+  | 'books'
+  | 'art'
+  | 'fleet'
+  | 'learning'
+  | 'commerce'
+  | 'portfolio'
+  | 'watchLog'
 
-export type Project = {
+export type ProjectMeta = {
   id: string
-  link: string
-  title: string
-  cover: ProjectCover
+  link?: string
+  cover: ProjectCoverVariant
   scope: 'client' | 'personal'
-  status: 'live' | 'nda'
-  year: string
-  category: string
-  constraints: string
-  approach: string
-  impact: string
-  tech: Array<string>
+  visibility: 'public' | 'nda'
+  stack: Array<string>
 }
 
-export type ProjectDictionary = {
-  desc: string
+export type ProjectCopy = {
+  year: string
   title: string
-  heading: string
+  category: string
+  challenge: string
+  approach: string
+  outcome: string
 }
+
+export type Project = ProjectMeta & ProjectCopy

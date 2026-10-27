@@ -1,226 +1,208 @@
 {
-    "nav": {
-        "brand": "Ali Kouhfar",
-        "skills": "Capabilities",
-        "index": "Index",
-        "lab": "The Lab",
-        "philosophy": "Philosophy",
-        "contact": "Contact",
-        "availability": "Open for work",
-        "menu": "Menu",
-        "close": "Close"
+  "nav": {
+    "brand": "Ali Kouhfar",
+    "role": "Frontend Developer",
+    "capabilities": "Capabilities",
+    "work": "Work",
+    "lab": "Lab",
+    "approach": "About",
+    "contact": "Contact",
+    "availability": "Available",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "skipToContent": "Skip to content",
+    "primaryLabel": "Primary navigation",
+    "mobileLabel": "Mobile navigation",
+    "portfolio": "Portfolio / 2026"
+  },
+  "hero": {
+    "eyebrow": "The Architecture of Interaction — Rev. 2026.01",
+    "statusShort": "Available",
+    "location": "Karaj, Iran",
+    "name": "Ali Kouhfar",
+    "role": "React · Next.js · TypeScript — production interfaces with structural precision.",
+    "title1": "Frontend",
+    "title2": "Developer",
+    "subtitle": "I build production interfaces the way buildings go up — ",
+    "subtitleHighlight": "load paths, grids, and circulation",
+    "subtitleEnd": " first; pixels last.",
+    "cta": "View selected work",
+    "contactCta": "Let’s talk",
+    "fig": "Fig. 01 — Portrait",
+    "coordinates": "35.8355° N / 50.9915° E",
+    "localTime": "Local time",
+    "sheet": "Sheet 00 / Home",
+    "roleLabel": "Frontend Developer",
+    "focusLabel": "Focus",
+    "focusValue": "React, Next.js & TypeScript",
+    "experienceLabel": "Experience",
+    "experienceValue": "2023 — present",
+    "scrollHint": "Scroll to work",
+    "blueprint": "Digital blueprint — 2026.01"
+  },
+  "capabilities": {
+    "eyebrow": "01 / Frontend capabilities",
+    "heading": "Frontend engineering & interface systems",
+    "desc": "Three areas of frontend practice: the React engineering that ships the interface, the spatial systems that give it coordinates, and the interface systems that keep it consistent and accessible.",
+    "note": "17 skills across three disciplines",
+    "labels": {
+      "disciplines": "Disciplines",
+      "skills": "Skills"
     },
-    "hero": {
-        "eyebrow": "Digital blueprint — rev. 2026.01",
-        "status": "Available for select projects",
-        "statusShort": "Available",
-        "location": "Karaj, Iran",
-        "name": "Ali Kouhfar",
-        "role": "Architectural engineer → UX designer → frontend engineer",
-        "title1": "The Architecture",
-        "title2": "of Interaction",
-        "subtitle": "I design and build digital interfaces the way structures are raised — ",
-        "subtitleHighlight": "load paths, grids, and circulation",
-        "subtitleEnd": " first; pixels last.",
-        "cta": "Open the Spatial Index",
-        "contactCta": "Start a conversation",
-        "fig": "Fig. 01 — Subject",
-        "coordinates": "35.8355° N / 50.9915° E",
-        "localTime": "Local time",
-        "sheet": "Sheet 00 / Landing",
-        "roleLabel": "Role",
-        "baseLabel": "Base",
-        "focusLabel": "Focus",
-        "focusValue": "Spatial UI systems",
-        "experienceLabel": "In practice",
-        "experienceValue": "2023 — present",
-        "scrollHint": "Scroll to index",
-        "foundation": [
-            {
-                "code": "01",
-                "label": "Architectural Engineering",
-                "note": "Load, span, structure"
-            },
-            {
-                "code": "02",
-                "label": "UX Design",
-                "note": "Flow, cognition, access"
-            },
-            {
-                "code": "03",
-                "label": "Frontend Engineering",
-                "note": "React, TypeScript, speed"
-            }
-        ],
-        "statusLabel": "Status"
-    },
-    "skills": {
-        "eyebrow": "01 / Load-bearing capabilities",
-        "heading": "Technical & Spatial Capabilities",
-        "desc": "Three load-bearing systems: the engineering that ships the interface, the spatial tooling that gives it coordinates, and the architectural thinking that gives it order.",
-        "note": "17 instruments across three disciplines",
-        "labels": {
-            "pillars": "Pillars",
-            "instruments": "Instruments"
-        },
-        "pillars": [
-            {
-                "code": "P-01",
-                "title": "Frontend Engineering",
-                "summary": "Component architecture, type safety, and state — built for production, not for demos.",
-                "items": [
-                    "React",
-                    "Next.js",
-                    "TypeScript",
-                    "Tailwind CSS",
-                    "Zod & React Hook Form",
-                    "State Management",
-                    "RTL & MSW"
-                ]
-            },
-            {
-                "code": "P-02",
-                "title": "Spatial & Geospatial Web",
-                "summary": "Vector maps, geometry, and clustering — interfaces that reason in coordinates.",
-                "items": [
-                    "MapLibre GL",
-                    "Turf.js",
-                    "Mapbox Draw",
-                    "Geofencing",
-                    "Point Clustering"
-                ]
-            },
-            {
-                "code": "P-03",
-                "title": "UX & Architectural Systems",
-                "summary": "Information architecture, grids, and human factors — resolved before the first line of code.",
-                "items": [
-                    "Information Architecture",
-                    "Spatial Layout",
-                    "Grid Systems",
-                    "Wireframing",
-                    "Human Factors"
-                ]
-            }
-        ]
-    },
-    "spatialIndex": {
-        "eyebrow": "02 / Selected structures",
-        "heading": "Spatial Index",
-        "desc": "Case studies read as architectural specifications: problem first, structure second, interface outcome last. Seven sheets, built and shipped.",
-        "count": "07 sheets",
-        "note": "All specifications documented from production work.",
-        "labels": {
-            "constraints": "Problem / constraint",
-            "approach": "Structural architecture",
-            "impact": "UX / UI outcome",
-            "stack": "Tech stack",
-            "sheet": "Sheet",
-            "view": "Open project",
-            "private": "Private build — NDA",
-            "client": "Client work",
-            "personal": "Personal",
-            "live": "Live",
-            "nda": "NDA"
-        }
-    },
-    "lab": {
-        "eyebrow": "03 / In progress — R&D sandbox",
-        "heading": "The Lab",
-        "count": "02 items",
-        "desc": "A live index of what I am learning, breaking, and rebuilding right now. Not finished products — active experiments.",
-        "live": "Updated continuously",
-        "labels": {
-            "status": "Status",
-            "progress": "Progress",
-            "stack": "Instruments"
-        },
+    "disciplines": [
+      {
+        "code": "D-01",
+        "title": "Frontend Engineering",
+        "summary": "Component architecture, type safety, and state — built for production, not for demos.",
         "items": [
-            {
-                "code": "R-02",
-                "title": "Three.js & WebGL",
-                "description": "Scene graphs, custom shaders, and GPU‑friendly geometry — learning to render space instead of drawing it in the DOM.",
-                "tags": [
-                    "Three.js",
-                    "React Three Fiber",
-                    "GLSL"
-                ]
-            },
-            {
-                "code": "R-03",
-                "title": "Data Structures & Algorithms",
-                "description": "Graphs, traversal, and complexity analysis — the load‑bearing maths behind maps, caches, and search.",
-                "tags": [
-                    "TypeScript",
-                    "Graphs",
-                    "Complexity"
-                ]
-            }
+          "React",
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS",
+          "Zod & React Hook Form",
+          "State Management",
+          "RTL & MSW"
         ]
-    },
-    "philosophy": {
-        "eyebrow": "04 / Philosophy",
-        "heading": "Form follows function. Structure follows behaviour.",
-        "lead": "I was trained to read buildings before I learned to read code. The forces are the same: load distribution, a disciplined grid, and clear circulation. I design React systems the way I was taught to read structures — reduce the span, make the load path visible, keep the exits obvious.",
-        "facts": [
-            {
-                "label": "Education",
-                "value": "B.Arch — Architectural Engineering"
-            },
-            {
-                "label": "Practice",
-                "value": "Frontend engineering since 2023"
-            },
-            {
-                "label": "Base",
-                "value": "Karaj, Iran — 35.8355° N"
-            },
-            {
-                "label": "Approach",
-                "value": "Spatial systems, accessible by default"
-            }
-        ],
-        "principles": [
-            {
-                "code": "01",
-                "structural": "Load distribution",
-                "applied": "State ownership",
-                "description": "State is structural load. I place it where it bears least on the render path, and keep one source of truth per span."
-            },
-            {
-                "code": "02",
-                "structural": "Grid systems",
-                "applied": "Component geometry",
-                "description": "A grid is an agreement, not a decoration. Tokens, spacing, and primitives create a geometry every screen inherits."
-            },
-            {
-                "code": "03",
-                "structural": "Circulation paths",
-                "applied": "Accessible flows",
-                "description": "People enter, move, and exit. Focus order, landmarks, and motion preferences are the corridors of an interface."
-            }
-        ],
-        "signature": "Structure before surface.",
-        "signatureNote": "Ali Kouhfar — Karaj, 2026"
-    },
-    "contact": {
-        "eyebrow": "05 / Contact",
-        "heading": "Let’s build something structural.",
-        "whoami": "whoami",
-        "whoamiValue": "Architectural engineer · UX designer · frontend engineer",
-        "promptContact": "contact --priority",
-        "promptConnect": "connect",
-        "status": "Available for select projects",
-        "location": "Karaj, Iran (GMT+3:30)",
-        "navLabel": "Index",
-        "connectLabel": "Elsewhere",
-        "copyEmail": "Copy email",
-        "copied": "Copied",
-        "backToTop": "Back to top",
-        "colophon": "Set in Inter & JetBrains Mono · Drawn, not templated",
-        "rights": "All rights reserved.",
-        "emailHint": "Email is the fastest route.",
-        "statusLabel": "Status",
-        "locationLabel": "Base"
+      },
+      {
+        "code": "D-02",
+        "title": "Spatial & Geospatial Web",
+        "summary": "Vector maps, geometry, and clustering — interfaces that reason in coordinates.",
+        "items": ["MapLibre GL", "Turf.js", "Mapbox Draw", "Geofencing", "Point Clustering"]
+      },
+      {
+        "code": "D-03",
+        "title": "Interface Systems & Accessibility",
+        "summary": "Design tokens, responsive grids, and accessible interaction — the rules every screen inherits.",
+        "items": [
+          "Design Systems",
+          "Responsive Layout",
+          "Grid Systems",
+          "Accessibility",
+          "Motion & Interaction"
+        ]
+      }
+    ]
+  },
+  "selectedWork": {
+    "eyebrow": "02 / Frontend work",
+    "heading": "Selected Frontend Work",
+    "desc": "Each project is structured like an architectural brief: challenge first, approach second, outcome last. Seven production frontend projects, built and shipped.",
+    "count": "07 projects",
+    "note": "All projects come from production frontend work.",
+    "labels": {
+      "challenge": "Challenge",
+      "approach": "Approach",
+      "outcome": "Outcome",
+      "technologies": "Technologies",
+      "project": "Project",
+      "visit": "Visit site",
+      "underNda": "Under NDA",
+      "clientProject": "Client project",
+      "personalProject": "Personal project",
+      "live": "Live",
+      "published": "Published",
+      "nda": "NDA"
     }
+  },
+  "lab": {
+    "eyebrow": "03 / Frontend experiments",
+    "heading": "The Lab",
+    "count": "02 experiments",
+    "desc": "What I’m learning, testing, and rebuilding in frontend right now — not finished products, just active experiments.",
+    "labels": {
+      "stack": "Technologies"
+    },
+    "items": [
+      {
+        "code": "R-01",
+        "title": "Three.js & WebGL",
+        "description": "Scene graphs, custom shaders, and GPU‑friendly geometry — learning to render space instead of drawing it in the DOM.",
+        "tags": ["Three.js", "React Three Fiber", "GLSL"]
+      },
+      {
+        "code": "R-02",
+        "title": "Data structures & algorithms",
+        "description": "Graphs, traversal, and complexity analysis — the load‑bearing maths behind maps, caches, and search.",
+        "tags": ["TypeScript", "Graphs", "Complexity"]
+      }
+    ],
+    "note": "Research notebook — 2026"
+  },
+  "approach": {
+    "eyebrow": "04 / About & approach",
+    "heading": "Frontend engineering, shaped by architecture.",
+    "lead": "I’m a frontend developer with a background in architectural engineering. I build React systems the way I was taught to read structures: reduce the span, make the load path visible, keep the exits obvious. The result is interfaces that are fast, accessible, and structurally sound.",
+    "facts": [
+      {
+        "label": "Role",
+        "value": "Frontend Developer"
+      },
+      {
+        "label": "Experience",
+        "value": "Frontend engineering since 2023"
+      },
+      {
+        "label": "Education",
+        "value": "B.Arch. — Architectural Engineering"
+      },
+      {
+        "label": "Location",
+        "value": "Karaj, Iran — 35.8355° N"
+      },
+      {
+        "label": "Approach",
+        "value": "Spatial systems, accessible from the start"
+      }
+    ],
+    "principles": [
+      {
+        "code": "01",
+        "structural": "Load distribution",
+        "applied": "State ownership",
+        "description": "State is structural load. I place it where it bears least on the render path, and keep one source of truth per span."
+      },
+      {
+        "code": "02",
+        "structural": "Grid systems",
+        "applied": "Component geometry",
+        "description": "A grid is an agreement, not a decoration. Tokens, spacing, and primitives create a geometry every screen inherits."
+      },
+      {
+        "code": "03",
+        "structural": "Circulation paths",
+        "applied": "Accessible flows",
+        "description": "People enter, move, and exit. Focus order, landmarks, and motion preferences are the corridors of an interface."
+      }
+    ],
+    "signature": "Structure before surface.",
+    "signatureNote": "Ali Kouhfar — Karaj, 2026",
+    "sectionNote": "Section 04 — Load paths / Grids / Circulation"
+  },
+  "contact": {
+    "eyebrow": "05 / Contact",
+    "heading": "Let’s build something that lasts.",
+    "whoami": "whoami",
+    "whoamiValue": "Frontend developer · React · Next.js · TypeScript",
+    "promptContact": "contact --priority=high",
+    "promptConnect": "connect",
+    "status": "Available for select projects",
+    "location": "Karaj, Iran (GMT+3:30)",
+    "navLabel": "Sections",
+    "copyEmail": "Copy email address",
+    "copied": "Copied!",
+    "backToTop": "Back to top",
+    "colophon": "Set in Inter, JetBrains Mono & Peyda · Drawn from scratch, no templates.",
+    "rights": "All rights reserved.",
+    "emailHint": "Email is the quickest way to reach me.",
+    "statusLabel": "Availability",
+    "locationLabel": "Location",
+    "languagesLabel": "Languages",
+    "languages": "Persian (native) · English (fluent) · German (working proficiency)"
+  },
+  "meta": {
+    "title": "Frontend Developer",
+    "description": "Ali Kouhfar is a frontend developer building production interfaces with React, Next.js, and TypeScript. An architectural engineering background informs his approach to structure, accessibility, and spatial systems.",
+    "tagline": "The Architecture of Interaction"
+  }
 }
