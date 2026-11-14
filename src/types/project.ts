@@ -6,6 +6,7 @@ export type ProjectCoverVariant =
   | 'commerce'
   | 'portfolio'
   | 'watchLog'
+  | 'geosphere'
 
 export type ProjectMeta = {
   id: string

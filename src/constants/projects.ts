@@ -310,6 +310,56 @@ export const PROJECT_ENTRIES: Array<ProjectEntry> = [
       },
     },
   },
+  {
+    id: 'b7f3d2c8-1a94-4e6b-8f27-2c5d9a4e8b99',
+    cover: 'geosphere',
+    scope: 'personal',
+    visibility: 'public',
+    stack: [
+      'React 19',
+      'Vite 8',
+      'TypeScript',
+      'Tailwind CSS 4',
+      'Zustand',
+      'MapLibre GL',
+      'Deck.gl',
+    ],
+    copy: {
+      en: {
+        year: '2026',
+        title: 'GeoSphere — Geographical Encyclopedia',
+        category: 'Frontend / Spatial data & WebGL',
+        challenge:
+          'An encyclopedia that had to show the same 250 countries in two cartographic engines — flat MapLibre and a Deck.gl globe — without the selection, camera and drawer drifting apart between them.',
+        approach:
+          'One Zustand store owns selection, so both viewports read and write the same country code. Country data is baked at build time from the REST Countries v5 API, whose keys are origin-locked and can never ship to a client; layer specs are plain data, testable without a browser.',
+        outcome:
+          'Explore the world in 2D or spin it in 3D and keep the country in hand: clicking a neighbour in the drawer reframes both views, and 34 config assertions plus a typecheck, lint and build gate every change.',
+      },
+      de: {
+        year: '2026',
+        title: 'GeoSphere — Geografische Enzyklopädie',
+        category: 'Frontend / Geodaten & WebGL',
+        challenge:
+          'Eine Enzyklopädie, die dieselben 250 Länder in zwei Kartografie-Engines zeigen musste — flaches MapLibre und eine Deck.gl-Kugel — ohne dass Auswahl, Kamera und Detailpanel zwischen beiden auseinanderlaufen.',
+        approach:
+          'Ein einziger Zustand-Store besitzt die Auswahl, sodass beide Viewports denselben Ländercode lesen und schreiben. Die Länderdaten werden zur Build-Zeit aus der REST-Countries-v5-API gebacken, deren Schlüssel origin-gebunden ist und nie zum Client gelangen darf; Layer-Spezifikationen sind reine Daten, ohne Browser testbar.',
+        outcome:
+          'Die Welt flach erkunden oder in 3D drehen und das Land in der Hand behalten: Ein Klick auf einen Nachbarn im Panel rahmt beide Ansichten neu, und 34 Konfigurations-Assertions plus Typecheck, Lint und Build sichern jede Änderung ab.',
+      },
+      fa: {
+        year: '۲۰۲۶',
+        title: 'ژئوسفر — دانشنامه جغرافیایی',
+        category: 'فرانت‌اند / داده مکانی و WebGL',
+        challenge:
+          'دانشنامه‌ای که باید همان ۲۵۰ کشور را در دو موتور نقشه‌کشی نشان می‌داد — MapLibre تخت و کره سه‌بعدی Deck.gl — بی‌آنکه انتخاب، دوربین و پنل جزئیات میان این دو از هم جدا شوند.',
+        approach:
+          'یک استور Zustand مالک انتخاب است، پس هر دو نما همان کد کشور را می‌خوانند و می‌نویسند. داده کشورها هنگام بیلد از API نسخه ۵ REST Countries پخته می‌شود که کلیدش به مبدأ قفل است و هرگز به مرورگر نمی‌رسد؛ مشخصات لایه‌ها داده خالص‌اند و بدون مرورگر تست می‌شوند.',
+        outcome:
+          'جهان را تخت بگرد یا در سه‌بعد بچرخان و کشور را در دست نگه دار: کلیک روی یک همسایه در پنل هر دو نما را دوباره قاب می‌کند، و ۳۴ اَسِرشن پیکربندی به‌همراه typecheck، لینت و بیلد هر تغییر را تضمین می‌کنند.',
+      },
+    },
+  },
 ]
 
 const localizedProjects = (locale: Locale): Array<Project> =>

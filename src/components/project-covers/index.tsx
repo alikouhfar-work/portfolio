@@ -4,6 +4,7 @@ import { ArtCover } from './ArtCover'
 import { BooksCover } from './BooksCover'
 import { CommerceCover } from './CommerceCover'
 import { FleetCover } from './FleetCover'
+import { GeosphereCover } from './GeosphereCover'
 import { LearningCover } from './LearningCover'
 import { PortfolioCover } from './PortfolioCover'
 import type { CoverProps } from './types'
@@ -17,6 +18,7 @@ const COVERS: Record<ProjectCoverVariant, FC<CoverProps>> = {
   commerce: CommerceCover,
   portfolio: PortfolioCover,
   watchLog: WatchLogCover,
+  geosphere: GeosphereCover,
 }
 
 type ProjectCoverProps = {
