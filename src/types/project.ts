@@ -1,14 +1,29 @@
-export type Project = {
+export type ProjectCoverVariant =
+  | 'books'
+  | 'art'
+  | 'fleet'
+  | 'learning'
+  | 'commerce'
+  | 'portfolio'
+  | 'watchLog'
+  | 'geosphere'
+
+export type ProjectMeta = {
   id: string
-  link: string
-  title: string
-  image: string
-  category: string
-  tech: Array<string>
+  link?: string
+  cover: ProjectCoverVariant
+  scope: 'client' | 'personal'
+  visibility: 'public' | 'nda'
+  stack: Array<string>
 }
 
-export type ProjectDictionary = {
-  desc: string
+export type ProjectCopy = {
+  year: string
   title: string
-  heading: string
+  category: string
+  challenge: string
+  approach: string
+  outcome: string
 }
+
+export type Project = ProjectMeta & ProjectCopy

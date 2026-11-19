@@ -1,63 +1,208 @@
 {
-    "header": {
-        "about": "About",
-        "experience": "Experience",
-        "education": "Education",
-        "project": "Work",
-        "expertise": "Expertise",
-        "languages": "Languages"
+  "nav": {
+    "brand": "Ali Kouhfar",
+    "role": "Frontend Developer",
+    "capabilities": "Capabilities",
+    "work": "Work",
+    "lab": "Lab",
+    "approach": "About",
+    "contact": "Contact",
+    "availability": "Available",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "skipToContent": "Skip to content",
+    "primaryLabel": "Primary navigation",
+    "mobileLabel": "Mobile navigation",
+    "portfolio": "Portfolio / 2026"
+  },
+  "hero": {
+    "eyebrow": "The Architecture of Interaction — Rev. 2026.01",
+    "statusShort": "Available",
+    "location": "Karaj, Iran",
+    "name": "Ali Kouhfar",
+    "role": "React · Next.js · TypeScript — production interfaces with structural precision.",
+    "title1": "Frontend",
+    "title2": "Developer",
+    "subtitle": "I build production interfaces the way buildings go up — ",
+    "subtitleHighlight": "load paths, grids, and circulation",
+    "subtitleEnd": " first; pixels last.",
+    "cta": "View selected work",
+    "contactCta": "Let’s talk",
+    "fig": "Fig. 01 — Portrait",
+    "coordinates": "35.8355° N / 50.9915° E",
+    "localTime": "Local time",
+    "sheet": "Sheet 00 / Home",
+    "roleLabel": "Frontend Developer",
+    "focusLabel": "Focus",
+    "focusValue": "React, Next.js & TypeScript",
+    "experienceLabel": "Experience",
+    "experienceValue": "2023 — present",
+    "scrollHint": "Scroll to work",
+    "blueprint": "Digital blueprint — 2026.01"
+  },
+  "capabilities": {
+    "eyebrow": "01 / Frontend capabilities",
+    "heading": "Frontend engineering & interface systems",
+    "desc": "Three areas of frontend practice: the React engineering that ships the interface, the spatial systems that give it coordinates, and the interface systems that keep it consistent and accessible.",
+    "note": "17 skills across three disciplines",
+    "labels": {
+      "disciplines": "Disciplines",
+      "skills": "Skills"
     },
-    "hero": {
-        "status": "Available for new opportunities",
-        "location": "Based in Karaj, Iran",
-        "title1": "Ali",
-        "title2": "Kouhfar",
-        "subtitle": "A Frontend Developer dedicated to building ",
-        "subtitleHighlight": "robust digital structures",
-        "subtitleEnd": " with code and creativity.",
-        "cta": "View Projects",
-        "cv": "Download CV"
-    },
-    "about": {
-        "title": "01 / About",
-        "heading": "Digital <span class='text-theme'>Architect</span>",
-        "p1": "With a background in Architectural Engineering, I bring a unique perspective to frontend development—viewing every interface as a structural challenge where form must follow function. My transition from physical to digital architecture was driven by a fascination with the speed and scalability of web technologies.",
-        "p2": "I focus on writing maintainable code and building interfaces that feel intuitive. I'm constantly learning new technologies to stay at the forefront of the ever-evolving web landscape.",
-        "exp": "Years of Experience",
-        "cleanCode": "Clean Code",
-        "cleanCodeDesc": "Scalable architecture",
-        "userCentric": "User Centric",
-        "userCentricDesc": "Focused on experience"
-    },
-    "experience": {
-        "title": "02 / Professional Path",
-        "heading": "Experience",
-        "current": "Current Role",
-        "role": "Developer"
-    },
-    "education": {
-        "title": "03 / Academic Background",
-        "heading": "Education"
-    },
-    "projects": {
-        "title": "04 / Selected Works",
-        "heading": "Projects",
-        "desc": "A collection of digital products focused on performance, accessibility, and high-end aesthetics."
-    },
-    "skills": {
-        "title": "05 / Expertise",
-        "heading": "Expertise"
-    },
-    "languages": {
-        "title": "06 / Languages",
-        "heading": "Spoken Languages"
-    },
-    "footer": {
-        "social": "Social",
-        "contact": "Contact",
-        "address": "Karaj, Iran",
-        "tos": "Terms of Service",
-        "privacyPolicy": "Privacy Policy",
-        "rights": "Ali Kouhfar. All Rights Reserved."
+    "disciplines": [
+      {
+        "code": "D-01",
+        "title": "Frontend Engineering",
+        "summary": "Component architecture, type safety, and state — built for production, not for demos.",
+        "items": [
+          "React",
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS",
+          "Zod & React Hook Form",
+          "State Management",
+          "RTL & MSW"
+        ]
+      },
+      {
+        "code": "D-02",
+        "title": "Spatial & Geospatial Web",
+        "summary": "Vector maps, geometry, and clustering — interfaces that reason in coordinates.",
+        "items": ["MapLibre GL", "Turf.js", "Mapbox Draw", "Geofencing", "Point Clustering"]
+      },
+      {
+        "code": "D-03",
+        "title": "Interface Systems & Accessibility",
+        "summary": "Design tokens, responsive grids, and accessible interaction — the rules every screen inherits.",
+        "items": [
+          "Design Systems",
+          "Responsive Layout",
+          "Grid Systems",
+          "Accessibility",
+          "Motion & Interaction"
+        ]
+      }
+    ]
+  },
+  "selectedWork": {
+    "eyebrow": "02 / Frontend work",
+    "heading": "Selected Frontend Work",
+    "desc": "Each project is structured like an architectural brief: challenge first, approach second, outcome last. Eight production frontend projects, built and shipped.",
+    "count": "08 projects",
+    "note": "All projects come from production frontend work.",
+    "labels": {
+      "challenge": "Challenge",
+      "approach": "Approach",
+      "outcome": "Outcome",
+      "technologies": "Technologies",
+      "project": "Project",
+      "visit": "Visit site",
+      "underNda": "Under NDA",
+      "clientProject": "Client project",
+      "personalProject": "Personal project",
+      "live": "Live",
+      "published": "Published",
+      "nda": "NDA"
     }
+  },
+  "lab": {
+    "eyebrow": "03 / Frontend experiments",
+    "heading": "The Lab",
+    "count": "02 experiments",
+    "desc": "What I’m learning, testing, and rebuilding in frontend right now — not finished products, just active experiments.",
+    "labels": {
+      "stack": "Technologies"
+    },
+    "items": [
+      {
+        "code": "R-01",
+        "title": "Three.js & WebGL",
+        "description": "Scene graphs, custom shaders, and GPU‑friendly geometry — learning to render space instead of drawing it in the DOM.",
+        "tags": ["Three.js", "React Three Fiber", "GLSL"]
+      },
+      {
+        "code": "R-02",
+        "title": "Data structures & algorithms",
+        "description": "Graphs, traversal, and complexity analysis — the load‑bearing maths behind maps, caches, and search.",
+        "tags": ["TypeScript", "Graphs", "Complexity"]
+      }
+    ],
+    "note": "Research notebook — 2026"
+  },
+  "approach": {
+    "eyebrow": "04 / About & approach",
+    "heading": "Frontend engineering, shaped by architecture.",
+    "lead": "I’m a frontend developer with a background in architectural engineering. I build React systems the way I was taught to read structures: reduce the span, make the load path visible, keep the exits obvious. The result is interfaces that are fast, accessible, and structurally sound.",
+    "facts": [
+      {
+        "label": "Role",
+        "value": "Frontend Developer"
+      },
+      {
+        "label": "Experience",
+        "value": "Frontend engineering since 2023"
+      },
+      {
+        "label": "Education",
+        "value": "B.Arch. — Architectural Engineering"
+      },
+      {
+        "label": "Location",
+        "value": "Karaj, Iran — 35.8355° N"
+      },
+      {
+        "label": "Approach",
+        "value": "Spatial systems, accessible from the start"
+      }
+    ],
+    "principles": [
+      {
+        "code": "01",
+        "structural": "Load distribution",
+        "applied": "State ownership",
+        "description": "State is structural load. I place it where it bears least on the render path, and keep one source of truth per span."
+      },
+      {
+        "code": "02",
+        "structural": "Grid systems",
+        "applied": "Component geometry",
+        "description": "A grid is an agreement, not a decoration. Tokens, spacing, and primitives create a geometry every screen inherits."
+      },
+      {
+        "code": "03",
+        "structural": "Circulation paths",
+        "applied": "Accessible flows",
+        "description": "People enter, move, and exit. Focus order, landmarks, and motion preferences are the corridors of an interface."
+      }
+    ],
+    "signature": "Structure before surface.",
+    "signatureNote": "Ali Kouhfar — Karaj, 2026",
+    "sectionNote": "Section 04 — Load paths / Grids / Circulation"
+  },
+  "contact": {
+    "eyebrow": "05 / Contact",
+    "heading": "Let’s build something that lasts.",
+    "whoami": "whoami",
+    "whoamiValue": "Frontend developer · React · Next.js · TypeScript",
+    "promptContact": "contact --priority=high",
+    "promptConnect": "connect",
+    "status": "Available for select projects",
+    "location": "Karaj, Iran (GMT+3:30)",
+    "navLabel": "Sections",
+    "copyEmail": "Copy email address",
+    "copied": "Copied!",
+    "backToTop": "Back to top",
+    "colophon": "Set in Inter, JetBrains Mono & Peyda · Drawn from scratch, no templates.",
+    "rights": "All rights reserved.",
+    "emailHint": "Email is the quickest way to reach me.",
+    "statusLabel": "Availability",
+    "locationLabel": "Location",
+    "languagesLabel": "Languages",
+    "languages": "Persian (native) · English (fluent) · German (working proficiency)"
+  },
+  "meta": {
+    "title": "Frontend Developer",
+    "description": "Ali Kouhfar is a frontend developer building production interfaces with React, Next.js, and TypeScript. An architectural engineering background informs his approach to structure, accessibility, and spatial systems.",
+    "tagline": "The Architecture of Interaction"
+  }
 }

@@ -1,63 +1,208 @@
 {
-    "header": {
-        "about": "Über mich",
-        "experience": "Berufserfahrung",
-        "education": "Ausbildung",
-        "project": "Projekte",
-        "expertise": "Fachgebiete",
-        "languages": "Languages"
+  "nav": {
+    "brand": "Ali Kouhfar",
+    "role": "Frontend-Entwickler",
+    "capabilities": "Kompetenzen",
+    "work": "Arbeiten",
+    "lab": "Labor",
+    "approach": "Über mich",
+    "contact": "Kontakt",
+    "availability": "Verfügbar",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen",
+    "skipToContent": "Zum Inhalt springen",
+    "primaryLabel": "Hauptnavigation",
+    "mobileLabel": "Mobile Navigation",
+    "portfolio": "Portfolio / 2026"
+  },
+  "hero": {
+    "eyebrow": "Die Architektur der Interaktion — Version 2026.01",
+    "statusShort": "Verfügbar",
+    "location": "Karaj, Iran",
+    "name": "Ali Kouhfar",
+    "role": "React · Next.js · TypeScript — produktionsreife Interfaces mit struktureller Präzision.",
+    "title1": "Frontend-",
+    "title2": "Entwickler",
+    "subtitle": "Ich baue produktionsreife Interfaces so, wie Gebäude entstehen — zuerst ",
+    "subtitleHighlight": "Lastpfade, Raster und Wegeführung",
+    "subtitleEnd": ", dann Pixel.",
+    "cta": "Ausgewählte Arbeiten ansehen",
+    "contactCta": "Kontakt aufnehmen",
+    "fig": "Abb. 01 — Porträt",
+    "coordinates": "35.8355° N / 50.9915° E",
+    "localTime": "Ortszeit",
+    "sheet": "Blatt 00 / Startseite",
+    "roleLabel": "Frontend-Entwickler",
+    "focusLabel": "Fokus",
+    "focusValue": "React, Next.js & TypeScript",
+    "experienceLabel": "Berufserfahrung",
+    "experienceValue": "2023 — heute",
+    "scrollHint": "Zu den Arbeiten",
+    "blueprint": "Digitaler Bauplan — 2026.01"
+  },
+  "capabilities": {
+    "eyebrow": "01 / Frontend-Kompetenzen",
+    "heading": "Frontend-Entwicklung & Interface-Systeme",
+    "desc": "Drei Bereiche der Frontend-Praxis: die React-Entwicklung, die das Interface ausliefert; die räumlichen Systeme, die ihm Koordinaten geben; und die Interface-Systeme, die es konsistent und barrierefrei halten.",
+    "note": "17 Kompetenzen in drei Disziplinen",
+    "labels": {
+      "disciplines": "Disziplinen",
+      "skills": "Kompetenzen"
     },
-    "hero": {
-        "status": "Offen für neue berufliche Möglichkeiten",
-        "location": "Ansässig in Karaj, Iran",
-        "title1": "Ali",
-        "title2": "Kouhfar",
-        "subtitle": "Frontend-Entwickler mit Fokus auf die Entwicklung ",
-        "subtitleHighlight": "robuster digitaler Strukturen",
-        "subtitleEnd": " durch Code und Kreativität.",
-        "cta": "Projekte ansehen",
-        "cv": "Lebenslauf herunterladen"
-    },
-    "about": {
-        "title": "01 / Über mich",
-        "heading": "Digitaler <span class='text-theme'>Architekt</span>",
-        "p1": "Mit einem Hintergrund in Architektur bringe ich eine einzigartige Perspektive in die Frontend-Entwicklung ein—ich betrachte jede Benutzeroberfläche als strukturelle Herausforderung, bei der die Form der Funktion folgen muss. Mein Übergang von physischer zu digitaler Architektur wurde durch die Faszination für die Geschwindigkeit und Skalierbarkeit moderner Webtechnologien motiviert.",
-        "p2": "Mein Fokus liegt auf wartbarem Code und der Entwicklung intuitiver Benutzeroberflächen. Ich bilde mich kontinuierlich weiter, um stets am Puls der sich schnell entwickelnden Weblandschaft zu bleiben.",
-        "exp": "Jahre Erfahrung",
-        "cleanCode": "Sauberer Code",
-        "cleanCodeDesc": "Skalierbare Architektur",
-        "userCentric": "Nutzerzentriert",
-        "userCentricDesc": "Fokus auf Benutzererlebnis"
-    },
-    "experience": {
-        "title": "02 / Beruflicher Werdegang",
-        "heading": "Erfahrung",
-        "current": "Aktuelle Position",
-        "role": "Entwickler"
-    },
-    "education": {
-        "title": "03 / Akademischer Hintergrund",
-        "heading": "Ausbildung"
-    },
-    "projects": {
-        "title": "04 / Ausgewählte Arbeiten",
-        "heading": "Projekte",
-        "desc": "Eine Auswahl digitaler Produkte mit Fokus auf Performance, Barrierefreiheit und hochwertige Ästhetik."
-    },
-    "skills": {
-        "title": "05 / Fachgebiete",
-        "heading": "Kompetenzen"
-    },
-    "languages": {
-        "title": "06 / Sprachen",
-        "heading": "Gesprochene Sprachen"
-    },
-    "footer": {
-        "social": "Sozial",
-        "contact": "Kontakt",
-        "address": "Karaj, Iran",
-        "tos": "Nutzungsbedingungen",
-        "privacyPolicy": "Datenschutzrichtlinie",
-        "rights": "Ali Kouhfar. Alle Rechte vorbehalten."
+    "disciplines": [
+      {
+        "code": "D-01",
+        "title": "Frontend-Entwicklung",
+        "summary": "Komponentenarchitektur, Typsicherheit und Zustand — für den Produktivbetrieb gebaut, nicht für Demos.",
+        "items": [
+          "React",
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS",
+          "Zod & React Hook Form",
+          "Zustandsverwaltung",
+          "RTL & MSW"
+        ]
+      },
+      {
+        "code": "D-02",
+        "title": "Räumliches & geospatiales Web",
+        "summary": "Vektorkarten, Geometrie und Cluster — Schnittstellen, die in Koordinaten denken.",
+        "items": ["MapLibre GL", "Turf.js", "Mapbox Draw", "Geofencing", "Punkt-Clustering"]
+      },
+      {
+        "code": "D-03",
+        "title": "Interface-Systeme & Barrierefreiheit",
+        "summary": "Design-Tokens, responsive Raster und barrierefreie Interaktion — die Regeln, die jeder Screen erbt.",
+        "items": [
+          "Design-Systeme",
+          "Responsives Layout",
+          "Rastersysteme",
+          "Barrierefreiheit",
+          "Motion & Interaktion"
+        ]
+      }
+    ]
+  },
+  "selectedWork": {
+    "eyebrow": "02 / Frontend-Arbeiten",
+    "heading": "Ausgewählte Frontend-Arbeiten",
+    "desc": "Jedes Projekt ist wie ein architektonisches Briefing aufgebaut: erst die Herausforderung, dann das Vorgehen, zuletzt das Ergebnis. Acht produktionsreife Frontend-Projekte, entwickelt und veröffentlicht.",
+    "count": "08 Projekte",
+    "note": "Alle Projekte stammen aus realer Frontend-Produktionsarbeit.",
+    "labels": {
+      "challenge": "Herausforderung",
+      "approach": "Vorgehen",
+      "outcome": "Ergebnis",
+      "technologies": "Technologien",
+      "project": "Projekt",
+      "visit": "Website öffnen",
+      "underNda": "Vertraulich (NDA)",
+      "clientProject": "Kundenprojekt",
+      "personalProject": "Eigenprojekt",
+      "live": "Live",
+      "published": "Veröffentlicht",
+      "nda": "NDA"
     }
+  },
+  "lab": {
+    "eyebrow": "03 / Frontend-Experimente",
+    "heading": "Das Labor",
+    "count": "02 Experimente",
+    "desc": "Was ich gerade im Frontend lerne, ausprobiere und neu aufbaue — keine fertigen Produkte, sondern laufende Experimente.",
+    "labels": {
+      "stack": "Technologien"
+    },
+    "items": [
+      {
+        "code": "R-01",
+        "title": "Three.js & WebGL",
+        "description": "Szenengraphen, eigene Shader und GPU‑freundliche Geometrie — Raum rendern statt im DOM zeichnen.",
+        "tags": ["Three.js", "React Three Fiber", "GLSL"]
+      },
+      {
+        "code": "R-02",
+        "title": "Datenstrukturen & Algorithmen",
+        "description": "Graphen, Traversierung und Komplexitätsanalyse — die tragende Mathematik hinter Karten, Caches und Suche.",
+        "tags": ["TypeScript", "Graphen", "Komplexität"]
+      }
+    ],
+    "note": "Forschungsnotizbuch — 2026"
+  },
+  "approach": {
+    "eyebrow": "04 / Über mich & Arbeitsweise",
+    "heading": "Frontend-Entwicklung, geprägt von Architektur.",
+    "lead": "Ich bin Frontend-Entwickler mit einem Hintergrund in Architekturingenieurwesen. Ich baue React-Systeme so, wie ich Strukturen zu lesen lernte: Spannweite reduzieren, den Lastpfad sichtbar halten, Ausgänge offensichtlich machen. Das Ergebnis sind Interfaces, die schnell, barrierefrei und strukturell belastbar sind.",
+    "facts": [
+      {
+        "label": "Rolle",
+        "value": "Frontend-Entwickler"
+      },
+      {
+        "label": "Berufserfahrung",
+        "value": "Frontend-Entwicklung seit 2023"
+      },
+      {
+        "label": "Ausbildung",
+        "value": "B.Arch. — Architektur"
+      },
+      {
+        "label": "Standort",
+        "value": "Karaj, Iran — 35.8355° N"
+      },
+      {
+        "label": "Ansatz",
+        "value": "Räumliche Systeme, von Anfang an barrierefrei"
+      }
+    ],
+    "principles": [
+      {
+        "code": "01",
+        "structural": "Lastverteilung",
+        "applied": "Zustandsverantwortung",
+        "description": "Zustand ist strukturelle Last. Ich platziere ihn dort, wo er den Renderpfad am wenigsten belastet, und halte pro Spannweite eine Quelle der Wahrheit."
+      },
+      {
+        "code": "02",
+        "structural": "Rastersysteme",
+        "applied": "Komponentengeometrie",
+        "description": "Ein Raster ist eine Übereinkunft, keine Dekoration. Tokens, Abstände und Primitiven bilden eine Geometrie, die jeder Screen erbt."
+      },
+      {
+        "code": "03",
+        "structural": "Wegeführung",
+        "applied": "Barrierefreie Abläufe",
+        "description": "Menschen kommen an, bewegen sich und gehen. Fokusreihenfolge, Orientierungspunkte und Bewegungspräferenzen sind die Korridore einer Oberfläche."
+      }
+    ],
+    "signature": "Struktur vor Oberfläche.",
+    "signatureNote": "Ali Kouhfar — Karaj, 2026",
+    "sectionNote": "Abschnitt 04 — Lastpfade / Raster / Wegeführung"
+  },
+  "contact": {
+    "eyebrow": "05 / Kontakt",
+    "heading": "Bauen wir etwas, das trägt.",
+    "whoami": "whoami",
+    "whoamiValue": "Frontend-Entwickler · React · Next.js · TypeScript",
+    "promptContact": "contact --priority=high",
+    "promptConnect": "connect",
+    "status": "Verfügbar für ausgewählte Projekte",
+    "location": "Karaj, Iran (GMT+3:30)",
+    "navLabel": "Bereiche",
+    "copyEmail": "E-Mail-Adresse kopieren",
+    "copied": "Kopiert",
+    "backToTop": "Nach oben",
+    "colophon": "Gesetzt in Inter, JetBrains Mono & Peyda · Von Grund auf gestaltet, keine Vorlagen.",
+    "rights": "Alle Rechte vorbehalten.",
+    "emailHint": "Am schnellsten erreichen Sie mich per E-Mail.",
+    "statusLabel": "Verfügbarkeit",
+    "locationLabel": "Standort",
+    "languagesLabel": "Sprachen",
+    "languages": "Persisch (Muttersprache) · Englisch (fließend) · Deutsch (berufliche Kenntnisse)"
+  },
+  "meta": {
+    "title": "Frontend-Entwickler",
+    "description": "Ali Kouhfar ist Frontend-Entwickler und baut produktionsreife Interfaces mit React, Next.js und TypeScript. Sein Hintergrund als Architekturingenieur prägt seinen Zugang zu Struktur, Barrierefreiheit und räumlichen Systemen.",
+    "tagline": "Die Architektur der Interaktion"
+  }
 }
