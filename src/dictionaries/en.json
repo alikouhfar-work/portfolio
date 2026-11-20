@@ -87,8 +87,8 @@
   "selectedWork": {
     "eyebrow": "02 / Frontend work",
     "heading": "Selected Frontend Work",
-    "desc": "Each project is structured like an architectural brief: challenge first, approach second, outcome last. Eight production frontend projects, built and shipped.",
-    "count": "08 projects",
+    "desc": "Each project is structured like an architectural brief: challenge first, approach second, outcome last. Nine production frontend projects, built and shipped.",
+    "count": "09 projects",
     "note": "All projects come from production frontend work.",
     "labels": {
       "challenge": "Challenge",

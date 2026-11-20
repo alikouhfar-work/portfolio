@@ -9,6 +9,7 @@ import { LearningCover } from './LearningCover'
 import { PortfolioCover } from './PortfolioCover'
 import type { CoverProps } from './types'
 import { WatchLogCover } from './WatchLogCover'
+import { WayfareCover } from './WayfareCover'
 
 const COVERS: Record<ProjectCoverVariant, FC<CoverProps>> = {
   books: BooksCover,
@@ -19,6 +20,7 @@ const COVERS: Record<ProjectCoverVariant, FC<CoverProps>> = {
   portfolio: PortfolioCover,
   watchLog: WatchLogCover,
   geosphere: GeosphereCover,
+  wayfare: WayfareCover,
 }
 
 type ProjectCoverProps = {

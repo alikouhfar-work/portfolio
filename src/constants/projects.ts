@@ -360,6 +360,57 @@ export const PROJECT_ENTRIES: Array<ProjectEntry> = [
       },
     },
   },
+  {
+    id: 'd2c7e4a9-5f18-4b73-9e42-7a1c6d8f2b33',
+    cover: 'wayfare',
+    scope: 'personal',
+    visibility: 'public',
+    stack: [
+      'Next.js 16',
+      'React 19',
+      'TypeScript',
+      'Tailwind CSS 4',
+      'Prisma 7',
+      'PostgreSQL',
+      'Auth.js v5',
+      'MapLibre GL',
+    ],
+    copy: {
+      en: {
+        year: '2026',
+        title: 'Wayfare — Travel Wishlist & Map',
+        category: 'Frontend / Maps & personal product',
+        challenge:
+          'A private list of places worth seeing had to make geocoding, a map and a status toggle feel like one gesture — with every read scoped to its owner and no check-then-act window a second account could slip through.',
+        approach:
+          'Next.js 16 App Router with Auth.js credentials and row-level isolation in Prisma: reads filter on id and userId, writes carry userId in the same statement. Markers are projected by hand and re-projected on resize, and the camera fit runs in un-wrapped Mercator so places across the date line stay in frame.',
+        outcome:
+          'A place moves from wishlist to visited through an optimistic toggle that rolls back to the exact snapshot on failure, and status is never colour alone — an amber pin with a hole becomes a pine pin with a checkmark. 55 tests, a keyboard-passable UI and zero axe violations gate every change.',
+      },
+      de: {
+        year: '2026',
+        title: 'Wayfare — Reise-Wunschliste & Karte',
+        category: 'Frontend / Karten & persönliches Produkt',
+        challenge:
+          'Eine private Liste sehenswerter Orte musste Geocoding, Karte und Statustoggle wie eine einzige Geste wirken lassen — mit jeder Abfrage auf ihren Besitzer beschränkt und ohne Prüf-dann-Schreiben-Fenster, durch das ein zweites Konto schlüpfen könnte.',
+        approach:
+          'Next.js 16 App Router mit Auth.js-Credentials und Zeilen-Isolation in Prisma: Lesen filtert nach id und userId, Schreiben führt userId in derselben Anweisung mit. Marker werden von Hand projiziert und beim Resize neu projiziert, und der Kamera-Fit rechnet in ungewrappten Mercator-Koordinaten, damit Orte jenseits der Datumsgrenze im Bild bleiben.',
+        outcome:
+          'Ein Ort wechselt per optimistischem Toggle von Wunsch zu besucht und rollt bei einem Fehler auf den exakten Snapshot zurück; Status ist nie nur Farbe — ein bernsteinfarbener Pin mit Loch wird zu einem kiefernfarbenen Pin mit Haken. 55 Tests, eine tastaturbedienbare Oberfläche und null axe-Verstöße sichern jede Änderung.',
+      },
+      fa: {
+        year: '۲۰۲۶',
+        title: 'وی‌فیر — فهرست آرزوی سفر و نقشه',
+        category: 'فرانت‌اند / نقشه و محصول شخصی',
+        challenge:
+          'فهرست خصوصی جاهایی که باید دید، باید ژئوکدینگ، نقشه و کلید وضعیت را مثل یک حرکت واحد نشان می‌داد — با هر خواندن محدود به مالکش و بدون پنجره بررسی-سپس-نوشتن که حساب دومی بتواند از آن رد شود.',
+        approach:
+          'Next.js 16 با App Router، ورود اعتباری Auth.js و جداسازی ردیفی در Prisma: خواندن با id و userId فیلتر می‌شود و نوشتن userId را در همان دستور می‌برد. نشانگرها دستی تصویر می‌شوند و هنگام تغییر اندازه دوباره تصویر می‌شوند، و قاب دوربین در مختصات مرکاتور ناپیچیده حساب می‌شود تا مکان‌های آن‌سوی خط تاریخ هم در کادر بمانند.',
+        outcome:
+          'یک مکان با کلید خوش‌بینانه از آرزو به دیده‌شده می‌رود و در صورت خطا به همان اسنپ‌شات قبلی برمی‌گردد؛ وضعیت هرگز فقط رنگ نیست — سنجاق کهربایی سوراخ‌دار به سنجاق کاجی با تیک تبدیل می‌شود. ۵۵ تست، رابط قابل‌استفاده با کیبورد و صفر خطای axe هر تغییر را تضمین می‌کنند.',
+      },
+    },
+  },
 ]
 
 const localizedProjects = (locale: Locale): Array<Project> =>
